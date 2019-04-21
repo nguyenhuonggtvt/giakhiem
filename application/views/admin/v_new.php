@@ -38,7 +38,11 @@
                         {/foreach}
                     </select><br />
                     <label>Ảnh đại diện</label>
-                    <input type="file"  class="form-control" value=" {$khoiphuc.anhdaidien}" name="anhdaidien"/><br />
+                    <input type="file"  class="form-control" value=" {$khoiphuc.anhdaidien}" name="anhdaidien"/>
+                    {if $khoiphuc.anhdaidien != ''}
+                    <div style="width: 200px; margin-top:10px;"><img style="max-width: 100%;" src="{$url}webroot/imgnew/{$khoiphuc.anhdaidien}"></div>
+                    {/if}
+                    <br />
                     <label>Mô tả ngắn</label>
                     <input class="form-control" type="text"  name="data[mota]" value="{$khoiphuc.mota}"/>
                     <label class="">Nội dung</label>

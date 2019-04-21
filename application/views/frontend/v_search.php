@@ -4,7 +4,7 @@
     {foreach $tintucs as $tintuc}
 		<div class="bai-viet-item">
 			<div class="bai-viet-thumb">
-				<a href="#"><img src="{$url}webroot/imgnew/{$tintuc.anhdaidien}" alt="" title=""></a>
+				<a href="{$url}bai-viet/{$tintuc.slug}.html"><img src="{$url}webroot/imgnew/{$tintuc.anhdaidien}" alt="{$tintuc.slug}" title="{$tintuc.tieude}"></a>
 			</div>
 			<div class="bai-viet-info">
 				<h2><a href="{$url}bai-viet/{$tintuc.slug}.html" title="{$tintuc.tieude}">{$tintuc.tieude}</a></h2>
