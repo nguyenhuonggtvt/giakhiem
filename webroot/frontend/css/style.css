@@ -1,0 +1,257 @@
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+/*
+# Thiết lập các biến cần dùng thường xuyên
+*/
+/*-----COLOR-----*/
+/*--MISC--*/
+/*
+ # Trong đây chỉ là CSS của những thành phần cơ bản sử dụng mọi màn hình.
+*/
+/*------------------------------------------------------------------
+*----------------Main Style----------------------------------------*/
+@font-face {
+  font-family: myfontRobotor;
+  src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype'), url('fonts/RobotoCondensed-Regular.eot#iefix') format('embedded-opentype'), url('fonts/RobotoCondensed-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: myfontRobotol;
+  src: url('fonts/RobotoCondensed-Light.ttf') format('truetype'), url('fonts/RobotoCondensed-Light.eot#iefix') format('embedded-opentype'), url('fonts/RobotoCondensed-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 100%;
+  line-height: 1.5em;
+  /*font-family: Arial,sans-serif;*/
+  font-family: myfontRobotor;
+  color: #333;
+  background: #ffffff url(images/bg-body.png) no-repeat center top;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.main-menu,
+.main-menu ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h2.tieude-cap2,
+h1.tieude-cap2 {
+  font-family: myfontRobotol;
+  color: #7b972c;
+}
+.box-gioithieu-noidung {
+  text-align: justify;
+}
+.sanpham-thumb img:hover {
+  opacity: 0.8;
+  transition-duration: 0.3s;
+}
+.sanpham-info h3,
+.sanpham-info h2 {
+  text-align: center;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+.sanpham-info h3 a,
+.sanpham-info h2 a {
+  color: #358294;
+  font-family: myfontRobotor;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+.sanpham-info h3 a:hover,
+.sanpham-info h2 a:hover {
+  color: red;
+}
+/*---Siderbar---*/
+.siderbar-header {
+  background: url(images/bg-siderbar-title.png) no-repeat right bottom;
+  color: #FFF;
+}
+.list-tintuc-link a {
+  color: #333;
+}
+/*---Footer---*/
+#footer {
+  background: #358294;
+  color: #FFF;
+  border-top: 1px solid #2d7484;
+}
+.menu-bottom ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-info a {
+  color: #FFF;
+}
+.footer-info p {
+  font-weight: normal;
+}
+.btn-social {
+  display: block;
+  padding: 25px;
+  background: no-repeat center center;
+}
+.btn-social:hover {
+  transform: rotate(360deg);
+}
+.footer-info h4,
+.footer-social h4 {
+  color: #a9d3dd;
+  font-size: 1.5em;
+  font-family: myfontRobotol;
+}
+.btnfacebook {
+  background-image: url(images/btn-facebook.png);
+}
+.btngoogleplus {
+  background-image: url(images/btn-google-plus.png);
+}
+.btntwitter {
+  background-image: url(images/btn-twitter.png);
+}
+.btnyoutube {
+  background-image: url(images/btn-youtube.png);
+}
+.under-footer {
+  text-align: center;
+  color: #174651;
+  text-shadow: 0px 1px 0px #307586;
+  background: #266473;
+  border-top: 1px solid #215b69;
+}
+/*--CHI TIẾT MỘT BÀI VIẾT--*/
+.chitietbv-mota,
+.chitietbv-noidungchitiet {
+  text-align: justify;
+}
+.chitietbv-ngaydang {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
+.chitietbv-mota {
+  font-weight: bold;
+}
+.btn-share {
+  display: inline-block;
+  padding: 0.8em;
+  background: no-repeat center center;
+}
+.share-facebook {
+  background-image: url(images/icon_fb.gif);
+}
+.share-googleplus {
+  background-image: url(images/icon_google.gif);
+}
+.share-twitter {
+  background-image: url(images/icon_tw.gif);
+}
+.tieude-lienquan {
+  color: #358294;
+}
+.bv-lienquan a {
+  color: #666;
+  font-weight: normal;
+}
+/*CHI TIẾT MỘT BÀI VIẾT*/
+.tieude-sanpham-cap1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+.chitietsp-share {
+  text-align: center;
+}
+/*CHI TIẾT MỘT BÀI VIÊT*/
+.chitietsp-mota,
+.chitietsp-noidung-chitiet {
+  text-align: justify;
+}
+/*TIÊU ĐỀ PHỤ*/
+.tieude-sub {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #358294;
+}
+/*---LIÊN HỆ---*/
+.bat-buoc {
+  color: red;
+  display: inline-block;
+  margin-left: 0.2em;
+}
+/*---SLOGAN---*/
+.slogan {
+  color: #358294;
+  font-size: 1.2em;
+}
+.ten-web {
+  color: #7b972c;
+  font-size: 1.2em;
+}
+/*---ĐỒNG HỒ---*/
+.topbar {
+  background: #333;
+  color: #F1F1F1;
+  padding: 0.2em;
+  font-size: 0.9em;
+}
+#clock {
+  text-align: center;
+}
+.tbl-linh-kien td {
+  width: 50%;
+  border: 1px solid #CCC;
+  padding: 0.2em 0.5em;
+}
+.tbl-linh-kien td img {
+  width: 100%;
+}
+/*----VIDEO---*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

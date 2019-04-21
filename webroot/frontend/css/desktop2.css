@@ -1,0 +1,231 @@
+@media screen and (min-width: 80em) {
+  body {
+    width: 100%;
+    *zoom: 1;
+  }
+  body:before,
+  body:after {
+    content: "";
+    display: table;
+  }
+  body:after {
+    clear: both;
+  }
+  /*
+# Thiết lập các biến cần dùng thường xuyên
+*/
+  /*-----COLOR-----*/
+  /*--MISC--*/
+  #header .header-content {
+    display: block;
+    width: 102.08333333%;
+    margin: 0 -1.04166667%;
+    *zoom: 1;
+    width: 85%;
+    margin: 0px auto;
+  }
+  #header .header-content:before,
+  #header .header-content:after {
+    content: "";
+    display: table;
+  }
+  #header .header-content:after {
+    clear: both;
+  }
+  #header .header-content .box-logo {
+    display: inline;
+    float: left;
+    width: 22.91666667%;
+    margin: 0 1.04166667%;
+  }
+  #header .header-content .menu {
+    display: inline;
+    float: left;
+    width: 72.91666667%;
+    margin: 0 1.04166667%;
+    padding-top: 2em;
+  }
+  #header .header-content .menu .main-menu {
+    width: 100%;
+  }
+  #header .header-content .menu .main-menu > li > a {
+    padding: 0.6em 1.2em;
+    font-size: 1.05em;
+  }
+  #main {
+    padding: 1em;
+    border-radius: 5px;
+  }
+  #main,
+  .footer-content {
+    width: 85%;
+    margin: 0px auto;
+  }
+  h2.tieude-cap2 {
+    font-size: 2em;
+  }
+  .main-content {
+    display: inline;
+    float: left;
+    width: 72.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .box-gioithieu-logo {
+    display: inline;
+    float: left;
+    width: 22.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .box-gioithieu-logo img {
+    margin-top: 2em;
+  }
+  .box-gioithieu-noidung {
+    display: inline;
+    float: left;
+    width: 72.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .siderbar {
+    display: inline;
+    float: left;
+    width: 22.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .list-tintuc-item:first-child .list-tintuc-thumb {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  .sanpham-item {
+    margin-bottom: 2em !important;
+  }
+  .sanpham-thumb img {
+    max-width: 90%;
+  }
+  .menu-bottom {
+    text-align: center;
+  }
+  .menu-bottom ul li a {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+  }
+  .footer-info {
+    display: inline;
+    float: left;
+    width: 47.91666667%;
+    margin: 0 1.04166667%;
+    padding-left: 5em;
+  }
+  footer-social {
+    display: inline;
+    float: left;
+    width: 39.58333333%;
+    margin: 0 1.04166667%;
+  }
+  .footer-box h4 {
+    font-size: 1.5em;
+  }
+  .footer-info p {
+    font-size: 1.1em;
+  }
+  .footer-info p.tencty {
+    font-size: 1.3em;
+  }
+  .chitietsp-thumb {
+    display: inline;
+    float: left;
+    width: 47.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .chitietsp-info {
+    display: inline;
+    float: left;
+    width: 47.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .chitietsp-info .chitietsp-mota p {
+    margin: 0;
+  }
+  .box-chia {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+    height: 1em;
+    background: url(images/bg-chia.png) no-repeat center top;
+    margin-top: 2em;
+  }
+  .chitietsp-noidung-chitiet {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 2em;
+  }
+  .chitietsp-noidung-chitiet p:first-child {
+    clear: both;
+  }
+  /*TRANG LIÊN HỆ*/
+  .box-lienhe {
+    width: 80%;
+    margin: 1em auto;
+  }
+  .box-lienhe-diachi,
+  .box-lienhe-dienthoai {
+    display: inline;
+    float: left;
+    width: 47.91666667%;
+    margin: 0 1.04166667%;
+    margin-bottom: 2em;
+  }
+  .title-box-lienhe {
+    margin-bottom: 1em;
+  }
+  .box-lienhe-form {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .form-label,
+  .form-text {
+    padding: 0.3em;
+  }
+  .form-label {
+    display: inline;
+    float: left;
+    width: 14.58333333%;
+    margin: 0 1.04166667%;
+    text-align: right;
+  }
+  .form-text {
+    display: inline;
+    float: left;
+    width: 81.25%;
+    margin: 0 1.04166667%;
+  }
+  /*DANH SÁCH TIN TỨC*/
+  .bai-viet-thumb {
+    max-height: 8.875em;
+  }
+  .bai-viet-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  .bai-viet-thumb {
+    max-height: 9.3em;
+    overflow: hidden;
+  }
+  /*--ĐỒNG HỒ--*/
+  .topbar {
+    margin-bottom: 1em;
+  }
+  .topbar-content {
+    width: 85%;
+    margin: 0 auto;
+  }
+  #clock {
+    text-align: left;
+  }
+  #box-video {
+    display: block;
+  }
+  /*END MEDIA QUERY*/
+}

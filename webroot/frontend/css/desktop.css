@@ -1,0 +1,229 @@
+@media screen and (min-width: 48em) {
+  body {
+    width: 100%;
+    *zoom: 1;
+  }
+  body:before,
+  body:after {
+    content: "";
+    display: table;
+  }
+  body:after {
+    clear: both;
+  }
+  /*
+# Thiết lập các biến cần dùng thường xuyên
+*/
+  /*-----COLOR-----*/
+  /*--MISC--*/
+  .menu {
+    overflow: visible;
+  }
+  .menu .show-menu {
+    display: none;
+  }
+  .menu .main-menu {
+    display: block !important;
+    /*Dùng important để bỏ hàm hide() trong jQuery*/
+    width: 95%;
+    background: -webkit-linear-gradient(#ffffff, #f2f2f2);
+    background: -moz-linear-gradient(#ffffff, #f2f2f2);
+    background: -o-linear-gradient(#ffffff, #f2f2f2);
+    background: linear-gradient(#ffffff, #f2f2f2);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px #999;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .menu .main-menu:after {
+    content: " ";
+    clear: both;
+    display: block;
+  }
+  .menu .main-menu li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    position: relative;
+  }
+  .menu .main-menu li a {
+    display: block;
+    color: #296f7f;
+    border: 0;
+    background: transparent url(images/bg-menu-main.png) no-repeat right center !important;
+    padding: 0.6em 1em;
+  }
+  .menu .main-menu li:last-child a {
+    background-image: none !important;
+  }
+  .menu .main-menu li .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 2.5em;
+    background: #358294;
+  }
+  .menu .main-menu li .sub-menu li {
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  .menu .main-menu li .sub-menu li a {
+    width: 100%;
+    padding: 0.6em 1em;
+    color: #FFF;
+    white-space: nowrap;
+    background: none;
+    border-top: 1px solid #3f90a3;
+    border-bottom: 1px solid #296f7f;
+  }
+  .menu .main-menu li .sub-menu li a:hover {
+    background-color: #317a8b !important;
+    text-shadow: 0x 1px 0px #FFF;
+  }
+  .menu .main-menu li:hover .sub-menu {
+    display: block;
+  }
+  .form-tk input[type="text"] {
+    width: 92%;
+  }
+  #content {
+    overflow: hidden;
+  }
+  .content-layer2 {
+    display: block;
+    width: 102.08333333%;
+    margin: 0 -1.04166667%;
+    *zoom: 1;
+  }
+  .content-layer2:before,
+  .content-layer2:after {
+    content: "";
+    display: table;
+  }
+  .content-layer2:after {
+    clear: both;
+  }
+  .main-content {
+    display: inline;
+    float: left;
+    width: 64.58333333%;
+    margin: 0 1.04166667%;
+  }
+  .box-gioithieu-noidung {
+    font-size: 1.1em;
+  }
+  .siderbar {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.04166667%;
+  }
+  .siderbar-content {
+    padding: 0 0.5em;
+  }
+  .list-tintuc-thumb {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.04166667%;
+  }
+  .list-tintuc-link {
+    display: inline;
+    float: left;
+    width: 64.58333333%;
+    margin: 0 1.04166667%;
+  }
+  .list-tintuc-item:first-child .list-tintuc-thumb,
+  .list-tintuc-item:first-child .list-tintuc-link {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .list-tintuc-item:first-child .list-tintuc-thumb a,
+  .list-tintuc-item:first-child .list-tintuc-link a {
+    color: #358294;
+    font-size: 1.2em;
+  }
+  .list-tintuc-item {
+    margin-bottom: 0.7em;
+  }
+  .list-tintuc-item a:hover {
+    color: red;
+  }
+  .list-tintuc-item:not(:first-child) .list-tintuc-thumb {
+    max-height: 3.75em;
+  }
+  .list-tintuc-item:first-child .list-tintuc-thumb {
+    max-height: 10.6em;
+  }
+  .menu-bottom ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-bottom ul li a {
+    background: transparent url(images/bg-menu-bottom.png) no-repeat right center;
+    padding: 0.5em 0.6em 0.5em 0.5em;
+    font-size: 0.9em;
+  }
+  .menu-bottom ul li:last-child a {
+    background-image: none;
+  }
+  .footer-info {
+    display: inline;
+    float: left;
+    width: 56.25%;
+    margin: 0 1.04166667%;
+  }
+  .footer-social {
+    display: inline;
+    float: left;
+    width: 39.58333333%;
+    margin: 0 1.04166667%;
+  }
+  /*DANH SÁCH TIN TỨC*/
+  .bai-viet-thumb {
+    max-height: 5.313em;
+  }
+  /*TRANG LIÊN HỆ*/
+  .box-lienhe-diachi,
+  .box-lienhe-dienthoai {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+    margin-bottom: 2em;
+  }
+  .title-box-lienhe {
+    margin-bottom: 1em;
+  }
+  .box-lienhe-form {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .form-label,
+  .form-text {
+    padding: 0.3em;
+    text-align: left;
+  }
+  .form-label {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+  }
+  .form-text {
+    display: inline;
+    float: left;
+    width: 97.91666667%;
+    margin: 0 1.04166667%;
+  }
+  #box-video {
+    display: block;
+  }
+  /*-----------End media query*/
+}

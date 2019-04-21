@@ -1,0 +1,112 @@
+@media screen and (min-width:80em)
+{
+	@import 'less_file/grid.less';
+	@import 'less_file/variables.less';
+	@total-width: 100%;
+
+	#header
+	{
+		.header-content
+		{
+			.row(12);
+			width:85%;
+			margin:0px auto;
+			.box-logo
+			{
+				.column(3,12);
+			}
+			.menu
+			{
+				.column(9,12);
+				padding-top:2em;
+				.main-menu{width:100%;}
+				.main-menu > li > a{padding:0.6em 1.2em; font-size:1.05em;}
+			}
+		}
+	}
+	#main
+	{
+		padding:1em;
+		border-radius:5px;
+	}
+	#main, .footer-content
+	{
+		width:85%;
+		margin:0px auto;
+	}
+	h2.tieude-cap2{font-size:2em;}
+	.main-content
+	{
+		.column(9,12);
+	}
+	.box-gioithieu-logo{.column(3,12); img{margin-top:2em;}}
+	.box-gioithieu-noidung{.column(9,12);}
+	.siderbar
+	{
+		.column(3,12);
+	}
+	.list-tintuc-item:first-child .list-tintuc-thumb
+	{
+		margin-top:0.3em; margin-bottom:0.3em;
+	}
+	.sanpham-item{margin-bottom:2em !important;}
+	.sanpham-thumb img{max-width:90%;}
+	.menu-bottom
+	{
+		text-align:center;
+		ul li a
+		{
+			font-size:1em; padding:0.5em 1em;
+			text-transform:uppercase;
+		}
+	}
+	.footer-info
+	{
+		.column(6,12);
+		padding-left:5em;
+	}
+	footer-social
+	{
+		.column(5,12);
+	}
+	.footer-box h4{font-size:1.5em}
+	.footer-info p{font-size:1.1em;}
+	.footer-info p.tencty{font-size:1.3em;}
+
+	.chitietsp-thumb{.column(6,12);}
+	.chitietsp-info
+	{
+		.column(6,12);
+		.chitietsp-mota p{margin:0;}
+	}
+	.box-chia{.column(12,12); height:1em; background:url(images/bg-chia.png) no-repeat center top; margin-top:2em;}
+	.chitietsp-noidung-chitiet
+	{
+		border-bottom:1px solid #CCC; margin-bottom:2em;
+		p:first-child{clear:both;}
+	}
+
+	/*TRANG LIÊN HỆ*/
+	.box-lienhe{width:80%; margin:1em auto;}
+	.box-lienhe-diachi, .box-lienhe-dienthoai{.column(6,12); margin-bottom:2em;}
+	.title-box-lienhe{margin-bottom:1em;}
+	.box-lienhe-form{.column(12,12);}
+	.form-label, .form-text{padding:0.3em}
+	.form-label{.column(2,12); text-align:right;}
+	.form-text{.column(10,12);}
+
+	/*DANH SÁCH TIN TỨC*/
+	.bai-viet-thumb{max-height:8.875em;}
+	.bai-viet-info h2{font-size:1.2em; margin-bottom:0.5em;}
+	.bai-viet-thumb{max-height:9.3em; overflow:hidden;}
+
+	/*--ĐỒNG HỒ--*/
+	.topbar{margin-bottom:1em;}
+	.topbar-content{width:85%; margin:0 auto;}
+	#clock{text-align:left;}
+
+
+	#box-video{display:block;}
+
+	/*END MEDIA QUERY*/
+}

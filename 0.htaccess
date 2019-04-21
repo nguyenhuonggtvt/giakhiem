@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond $0 !^(|swf|images|upload_image|system|tools|themes|index\.php) [NC]
+RewriteRule ^(.*)$ index.php/$1 [L]
+ 

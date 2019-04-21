@@ -1,0 +1,223 @@
+@media screen and (min-width:18.750em)
+{
+	@import 'less_file/grid.less';
+	@import 'less_file/variables.less';
+	@total-width: 100%;
+
+body
+{
+	font-size:0.98em;/*15px*/
+}
+.box-logo
+{
+	text-align:center;
+	padding:0.5em;
+}
+.menu
+{
+	overflow:hidden;
+	padding:0.5em 0.1em 0.5em 0.1em;
+	.show-menu
+	{
+		display:block;
+		width:8em; padding:0.5em; color:#358294; text-align:center; margin:0 auto;
+		border-radius:3px; box-shadow:0px 2px 3px #666;
+		background:-wwebkit-linear-gradient(#FFF, #F1F1F1);
+		background:-moz-linear-gradient(#FFF, #F1F1F1);
+		background:-o-linear-gradient(#FFF, #F1F1F1);
+		background:linear-gradient(#FFF, #F1F1F1);
+		border:1px solid #f5f5f5;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+		font-size:1.2em;
+	}
+	.main-menu
+	{
+		padding:0.3em 0;
+		margin-top:1em;
+		background:#FFF;
+		li 
+		{
+			margin:0 0.3em;
+			padding:0;
+			a
+			{
+				display:block;
+				padding:0.5em 0 0.5em 0.8em;
+				background:#358294;
+				color:#FFF;
+				border-top:1px solid #3f90a3; border-bottom:1px solid #296f7f;
+			}
+		}
+		.sub-menu
+		{
+			padding:0;
+			li
+			{
+				margin:0;
+				a{padding-left:2em; background:#358294 url(images/list-menu.png) no-repeat 0.7em center;}
+			}
+		}
+	}
+}
+.form-tk
+{
+	background:rgba(255,255,255,0.7);
+	border-radius:3px;
+	width:85%;
+	margin:1em auto;
+	padding:0.4em 0.5em;
+	input[type="text"]
+	{
+		border:0;
+		font-size:0.9em;
+		outline:none;
+		background:none;
+		color:#333;
+		padding:0.4em 0.5em;
+		width:80%;
+	}
+	input[type="submit"]
+	{
+		border:0; background:url(images/btn-search.png) no-repeat right center; padding:0.6em 1em; outline:none;
+	}
+}
+#main
+{
+	padding:0.3em;
+	background:rgba(255,255,255,0.7);
+}
+.box-gioithieu-logo{display:none;}
+.sanpham-item
+{
+	margin-bottom:1em;
+}
+.sanpham-thumb{text-align:center;}
+
+.siderbar-box
+{
+	overflow:hidden;
+	margin-bottom:1em;
+}
+.siderbar-header
+{
+	padding:0.5em 0 0.5em 1em;
+	font-size:1.7em;
+	margin-bottom:0.2em;
+}
+.list-tintuc-item
+{
+	.row(12);
+	margin-bottom:0.5em;
+}
+.btn-xemthem{display:block; text-align:right; color:#777; font-style:italic; font-size:0.9em}
+.btn-xemthem:hover{color:red;}
+.list-tintuc-thumb
+{
+	.column(4,12); max-height:3.75em; overflow:hidden;
+}
+.list-tintuc-link
+{
+	.column(8,12);
+}
+#footer
+{
+	overflow:hidden;
+}
+.menu-bottom ul li
+{
+	padding:0.2em 0.2em 0;
+	a
+	{
+		display:block;
+		padding:0.5em 0 0.5em 0.7em;
+		background-color:#4393a6;
+		color:#FFF;
+		font-size:1em;
+	}
+}
+.footer-content
+{
+	.row(12);
+}
+
+.menu-bottom, .footer-box
+{
+	.column(12,12);
+}
+.footer-box
+{
+	h4{text-align:center; margin:0.8em 0 0.6em;}
+	padding:0.5em;
+	p
+	{
+		margin:0.3em 0;
+		font-family:myfontRobotol;
+		font-size:0.95em;
+	}
+	.tencty
+	{
+		text-transform:uppercase;
+	}
+}
+.social-icon
+{
+	text-align:center;
+	a{display:inline-block;}
+	margin-bottom:1em;
+}
+.dang-ky-cong-thuong
+{
+	text-align:center;
+}
+.under-footer
+{
+	padding:0.5em;
+}
+
+/*CHI TIẾT MỘT BÀI VIẾT*/
+h1.tieude-web{font-size:1.5em; line-height:1.3em; margin:0;}
+.chitietbv-ngaydang{.column(6,12); text-align:left; margin-top:0.5em; margin-bottom:0.5em}
+.chitietbv-share{.column(6,12); text-align:right; margin-top:0.5em; margin-bottom:0.5em}
+h3.bv-lienquan{margin:0.3em; font-size:1em; padding-left:2em; background:url(images/list-menu.png) no-repeat 0.5em 0.4em;}
+
+/*TRANG LIÊN HỆ*/
+.box-lienhe
+{
+	overflow:hidden;padding:0.5em;
+}
+.box-lienhe-row
+{
+	.row(12);
+}
+.title-box-lienhe
+{
+	color:#7b972c;
+	background-color:#ddecb4;
+	padding:0.5em 1em; border-radius:3px; font-size:1.1em;
+}
+.box-lienhe-diachi p, .box-lienhe-dienthoai p{margin:0; line-height:1.8em;}
+.box-lienhe-diachi i{color:#999; font-size:0.85em;}
+.form-text input[type="text"], .form-text textarea{width:100%;}
+
+/*DANH SÁCH TIN TỨC*/
+.over{overflow:hidden;}
+.bai-viet-item{.row(12); margin-top:1em;}
+.bai-viet-thumb{.column(3,12); overflow:hidden; max-height:3.438em;}
+.bai-viet-thumb img{max-width:100%;}
+.bai-viet-info{.column(9,12);}
+.bai-viet-info h2{font-size:1em; margin:0;}
+.bai-viet-info h2 a{color:#690; font-weight:normal;}
+.bai-viet-info h2 a:hover{color:#069;}
+.bai-viet-mo-ta{display:none;}
+
+/*CHI TIẾT MỘT SẢN PHẨM*/
+.chitietsp-thumb
+{
+	text-align:center;
+	img{max-width:90%;}
+}
+.danhmuc-gioithieu{text-align:justify;}
+#box-video{display:none;}
+
+/*------End Query-----------*/
+}

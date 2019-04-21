@@ -1,0 +1,56 @@
+@media screen and (min-width:34.375em)
+{
+	@import 'less_file/grid.less';
+	@import 'less_file/variables.less';
+	@total-width: 100%;
+
+.main-content
+{
+	overflow:hidden;
+	padding:0.5em;
+}
+.form-tk input[type="text"]{width:90%;}
+.main-content-layer2
+{
+	.row(12);
+	.sanpham-item
+	{
+		.column(6,12);
+	}
+	.danhmuc-gioithieu
+	{
+		.column(12.12);
+	}
+}
+.list-tintuc-thumb{.column(3,12);}
+.list-tintuc-link{.column(9,12);}
+.list-tintuc-thumb img{width:100%;}
+
+/*CHI TIẾT MỘT SẢN PHẨM*/
+.chitietsp-thumb
+{
+	text-align:center;
+	img{max-width:90%;}
+}
+
+/*SIDERBAR*/
+
+
+/*TRANG LIÊN HỆ*/
+.box-lienhe-diachi, .box-lienhe-dienthoai{.column(6,12); margin-bottom:2em;}
+.title-box-lienhe{margin-bottom:1em;}
+.box-lienhe-form{.column(12,12);}
+.form-label, .form-text{padding:0.3em}
+.form-label{.column(2,12); text-align:right;}
+.form-text{.column(10,12);}
+
+/*DANH SÁCH TIN TỨC*/
+.bai-viet-thumb{max-height:6.250em;}
+.bai-viet-mo-ta{display:block; text-align:justify;}
+.bai-viet-info h2{font-size:1.1em;}
+
+
+
+/*---------End media query-----------*/
+
+}

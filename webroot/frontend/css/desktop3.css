@@ -1,0 +1,27 @@
+@media screen and (min-width: 120em) {
+  body {
+    width: 100%;
+    *zoom: 1;
+  }
+  body:before,
+  body:after {
+    content: "";
+    display: table;
+  }
+  body:after {
+    clear: both;
+  }
+  /*
+# Thiết lập các biến cần dùng thường xuyên
+*/
+  /*-----COLOR-----*/
+  /*--MISC--*/
+  #header .header-content {
+    width: 63%;
+  }
+  #main,
+  .footer-content,
+  .topbar-content {
+    width: 63%;
+  }
+}
