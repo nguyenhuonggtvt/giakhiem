@@ -17,7 +17,7 @@
 |
 */
 
-$config['base_url'] = 'http://chantaygiagiakhiem.com/';
+$config['base_url'] = 'http://chtg.com/';
 /*
 |--------------------------------------------------------------------------
 | Index File
