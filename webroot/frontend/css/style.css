@@ -96,8 +96,7 @@ h1.tieude-cap2 {
 }
 /*---Siderbar---*/
 .siderbar-header {
-  background: url(images/bg-siderbar-title.png) no-repeat right bottom;
-  color: #FFF;
+  background-color: #f1f1f1;
 }
 .list-tintuc-link a {
   color: #333;
@@ -180,10 +179,17 @@ h1.tieude-cap2 {
 }
 .tieude-lienquan {
   color: #358294;
+  padding: 0.5em 0 0.5em 1em;
+  font-weight: normal;
+  margin: 0;
+  background: #f1f1f1;
 }
 .bv-lienquan a {
   color: #666;
   font-weight: normal;
+}
+.bv-lienquan a:hover {
+  color: #7b972c;
 }
 /*CHI TIẾT MỘT BÀI VIẾT*/
 .tieude-sanpham-cap1 {

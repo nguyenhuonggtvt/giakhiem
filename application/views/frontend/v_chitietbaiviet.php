@@ -17,6 +17,6 @@
         <h2 class="tieude-lienquan">Bài viết liên quan</h2>
     {/if}
 	{foreach $tintucs as $tintuc}
-    <h3 class="bv-lienquan"><a href="{$url}bai-viet/{$tintuc.slug}.html">{$tintuc.tieude}</a></h3>
+    <h3 class="bv-lienquan"><a title="{$tintuc.tieude}" href="{$url}bai-viet/{$tintuc.slug}.html">{$tintuc.tieude}</a></h3>
 	{/foreach}
  {/if}

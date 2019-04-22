@@ -45,6 +45,8 @@
   			ga('send', 'pageview');
 	</script>
 {/literal}
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1469212313374511&autoLogAppEvents=1"></script>
 	<div class="topbar">
 		<div class="topbar-content">
 			<div id="clock">Đang tải...</div>

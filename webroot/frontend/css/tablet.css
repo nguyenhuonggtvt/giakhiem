@@ -107,6 +107,9 @@
     width: 81.25%;
     margin: 0 1.04166667%;
   }
+  .siderbar-header {
+    font-size: 1.5em;
+  }
   /*DANH SÁCH TIN TỨC*/
   .bai-viet-thumb {
     max-height: 6.250em;
@@ -123,5 +126,8 @@
 @media screen and (max-width: 34.375em) {
   .menu .main-menu > li > a {
     font-weight: bold;
+  }
+  .siderbar{
+    margin-top: 0.5em;
   }
 }
