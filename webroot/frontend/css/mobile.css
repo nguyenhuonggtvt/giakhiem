@@ -163,11 +163,13 @@
     overflow: hidden;
   }
   .menu-bottom ul li {
-    padding: 0.2em 0.2em 0;
+    padding: 0 0 0.2em 0.2em;
+    display: inline-block;
+    float: left;
   }
   .menu-bottom ul li a {
     display: block;
-    padding: 0.5em 0 0.5em 0.7em;
+    padding: 0.5em;
     background-color: #4393a6;
     color: #FFF;
     font-size: 1em;

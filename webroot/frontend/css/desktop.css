@@ -159,9 +159,9 @@
     max-height: 10.6em;
   }
   .menu-bottom ul li {
-    display: inline-block;
     padding: 0;
     margin: 0;
+    float: none;
   }
   .menu-bottom ul li a {
     background: transparent url(images/bg-menu-bottom.png) no-repeat right center;
