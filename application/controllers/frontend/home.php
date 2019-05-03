@@ -10,6 +10,7 @@
     {
         parent::__construct();
         $this->load->model('m_chantaygia');
+        $this->load->helper('text');
         
     }
     function index()

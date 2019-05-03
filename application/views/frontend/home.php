@@ -4,7 +4,11 @@
 		<img src="{$url}webroot/imgnew/{$gioithieu.anhdaidien}"/>
 	</div>
 	<div class="box-gioithieu-noidung">
-		<p>{$gioithieungan}&nbsp;<a href="{$url}bai-viet/{$gioithieu.slug}.html">Đọc thêm</a></p>
+		<p>{if !$isMobile}
+			{word_limiter($gioithieungan, 175)}
+		{else}
+			{word_limiter($gioithieungan, 80)}
+		{/if}&nbsp;<a href="{$url}bai-viet/{$gioithieu.slug}.html">Đọc thêm</a></p>
 	</div>
 </div><!--End box giới thiệu-->
 <h2 class="tieude-cap2">Danh mục</h2>
