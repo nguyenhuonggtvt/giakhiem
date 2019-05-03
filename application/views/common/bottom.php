@@ -35,24 +35,6 @@
 </div>
 {/if}
 <!--END TIN TỨC-->
-<div class="siderbar-box" id="box-video">
-	<div class="siderbar-header">Video</div>
-	<div class="siderbar-content">
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/-xQwVazMKtk?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/4ZVR7oKWRL4?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/j3RWG3L9nkY?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/n71Mp-meRxc?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
-</div>
-
 
 <div class="siderbar-box">
 	<div class="siderbar-header">Liên kết</div>
@@ -61,7 +43,7 @@
 	</div>
 </div>
 
-<!--END VIDEO-->
+<!--END FACEBOOK-->
 
 </div>
 <!--END SIDERBAR-->

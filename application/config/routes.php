@@ -42,6 +42,7 @@
 //$route['([a-zA-Z0-9_-]+)-n([0-9]+).html'] = "frontend/test/detailnew/$2";
 //$route['([a-zA-Z0-9_-]+)-p([0-9]+).html'] ="frontend/test/detailproduct/$2";
 $route['lien-he'] ="frontend/c_lienhe";
+$route['video'] ="frontend/c_video";
 $route['search'] ="frontend/c_search";
 $route['bai-viet/([a-zA-Z0-9_-]+).html$'] ="frontend/c_baiviet/index/$1";
 $route['bai-viet'] ="frontend/c_baiviet/listtintuc/";

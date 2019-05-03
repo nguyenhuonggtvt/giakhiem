@@ -225,5 +225,9 @@
   #box-video {
     display: block;
   }
+  .list-video-name {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
   /*-----------End media query*/
 }
