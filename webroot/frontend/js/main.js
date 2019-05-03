@@ -19,6 +19,7 @@ var year=d.getFullYear();
 var days=new Array("Chủ nhật,","Thứ 2,","Thứ 3,","Thứ 4,","Thứ 5,","Thứ 6,","Thứ 7,");
 var months=new Array("01","02","03","04","05","06","07","08","09","10","11","12");
 var am_pm;
+if (date<10) {date="0" + date}
 if (s<10) {s="0" + s}
 if (m<10) {m="0" + m}
 if (h<10) {h="0" + h}

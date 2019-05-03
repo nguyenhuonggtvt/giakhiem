@@ -39,6 +39,17 @@
 <div class="siderbar-box">
 	<div class="siderbar-header">Liên kết</div>
 	<div class="siderbar-content">
+		<div style="padding-top: 1em; text-align:center;">
+		<a href="{$url}video">
+			<img title="Video về chân tay giả" src="{$url}webroot/frontend/img/view-video.png">
+		</a>
+		</div>
+	</div>
+</div>
+
+<div class="siderbar-box">
+	<div class="siderbar-header">Facebook</div>
+	<div class="siderbar-content">
 		<div class="fb-page" data-href="https://www.facebook.com/chantaygiagiakhiem/" data-tabs="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chantaygiagiakhiem/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chantaygiagiakhiem/">Chân tay giả Gia Khiêm</a></blockquote></div>
 	</div>
 </div>
