@@ -63,7 +63,7 @@ class c_menuduoi extends MY_Controller
     function stt_uutien(){
         $data['id']=$this->input->post('id');
         $data['stt_uutien']=$this->input->post('stt');
-        $this->m_tintuc->SaveData_ToTable('menu',$data);
+        $this->m_tintuc->SaveData_ToTable('menuduoi',$data);
         echo 1;
         die;
     } 

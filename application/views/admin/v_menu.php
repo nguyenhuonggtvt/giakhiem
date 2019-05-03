@@ -22,7 +22,7 @@
             if(ask==true){
                $.ajax({
                     type:'POST',
-                    url:gb_url+'menu',
+                    url:gb_url+'admin/menu',
                     data:{'action':'stt_up','id':$(this).data('id'),'stt':$(this).val()},
                     success:function(data){
                         
