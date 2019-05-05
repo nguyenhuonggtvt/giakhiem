@@ -55,17 +55,7 @@
        });
     }
 </script>
-
-    <!--[if lt IE 9]>
-        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
-        <![endif]-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    <style>
+<style>
     input,input:focus{
         border: #8ECAEA 1px solid;
         background: #E6F3FB;
@@ -73,7 +63,7 @@
         color:#1D1D1D;
         font-size: 16px;
     }
-    </style>
+</style>
 
 </head>
 
@@ -109,31 +99,37 @@
 
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-
                         <div class="menu_section">
                             <h3>Admin</h3>
                             <ul class="nav side-menu">
-                                <li><a href="{$url}dslienhe"><i class="fa fa-home"></i>Danh sách gửi liên hệ</a></li> 
-                                                            
-                                
+                                <li><a href="{$url}dslienhe"><i class="fa fa-envelope-o"></i>Danh sách gửi liên hệ</a></li> 
                                 <li><a><i class="fa fa-newspaper-o"></i> Bài viết <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="{$url}groupnew">Nhóm bài viết</a>
                                         </li>
-                                        <li><a href="{$url}news">Bài biết mới</a>
-                                        </li>
                                         <li><a href="{$url}pm-new">Quản lý bài viết</a>
+                                        </li>
+                                        <li><a href="{$url}news">Bài biết mới</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-edit"></i> Sản phẩm <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-cube"></i> Sản phẩm <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="{$url}nhomsp">Nhóm sản phẩm</a>
                                         </li>
+                                        <li><a href="{$url}qlsanpham">Quản lý sản phẩm</a>
+                                        </li>
                                         <li><a href="{$url}newsp">Sản phẩm mới</a>
                                         </li>
-                                        
-                                        <li><a href="{$url}qlsanpham">Quản lý sản phẩm</a>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-wheelchair"></i> Sản phẩm khác<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="{$url}">Thông tin</a>
+                                        </li>
+                                        <li><a href="{$url}admin/qlsanphamkhac">Quản lý sản phẩm</a>
+                                        </li>
+                                        <li><a href="{$url}admin/newspkhac">Sản phẩm mới</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -158,50 +154,9 @@
                                         </li>
                                         
                                     </ul>
-                                </li>                                
-                                
-                                  
-                                
-                                
+                                </li>  
                             </ul>
                         </div>
-                       <!-- 
-                        <div class="menu_section">
-                            <ul class="nav side-menu">
-                                <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu" style="display: none">
-                                        <li><a href="e_commerce.html">E-commerce</a>
-                                        </li>
-                                        <li><a href="projects.html">Projects</a>
-                                        </li>
-                                        <li><a href="project_detail.html">Project Detail</a>
-                                        </li>
-                                        <li><a href="contacts.html">Contacts</a>
-                                        </li>
-                                        <li><a href="profile.html">Profile</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu" style="display: none">
-                                        <li><a href="page_404.html">404 Error</a>
-                                        </li>
-                                        <li><a href="page_500.html">500 Error</a>
-                                        </li>
-                                        <li><a href="plain_page.html">Plain Page</a>
-                                        </li>
-                                        <li><a href="login.html">Login Page</a>
-                                        </li>
-                                        <li><a href="pricing_tables.html">Pricing Tables</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    -->
                     </div>
                     <!-- /sidebar menu -->
 

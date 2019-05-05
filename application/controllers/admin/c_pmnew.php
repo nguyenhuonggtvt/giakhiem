@@ -10,8 +10,7 @@ class c_pmnew extends MY_Controller
         $this->load->model('m_tintuc');
     }
     function index()
-    {           
-        //print_r ($this->db->list_tables());die;
+    {
         if($this->input->get('del')){
             if($this->m_tintuc->del_new($this->input->get('del')))
                 $this->status=1;

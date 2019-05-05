@@ -1,26 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
-| -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.
-| Typically there is a one-to-one relationship between a URL string
-| and its corresponding controller class/method. The segments in a
-| URL normally follow this pattern:
-|
-|	example.com/class/method/id/
-|
-| In some instances, however, you may want to remap this relationship
-| so that a different class/function is called than the one
-| corresponding to the URL.
-|
-| Please see the user guide for complete details:
-|
-|	http://codeigniter.com/user_guide/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
 |
 | There area two reserved routes:
 |
@@ -37,10 +16,6 @@
 |
 */
 //Frontend
-//$route['([a-zA-Z0-9_-]+)-cn([0-9]+).html'] = "frontend/test/detailcategotynew/$2";
-//$route['([a-zA-Z0-9_-]+)-cp([0-9]+).html'] = "frontend/test/detailcategotyproduct/$2";
-//$route['([a-zA-Z0-9_-]+)-n([0-9]+).html'] = "frontend/test/detailnew/$2";
-//$route['([a-zA-Z0-9_-]+)-p([0-9]+).html'] ="frontend/test/detailproduct/$2";
 $route['lien-he'] ="frontend/c_lienhe";
 $route['video'] ="frontend/c_video";
 $route['search'] ="frontend/c_search";
@@ -54,6 +29,8 @@ $route['tay-gia/([a-zA-Z0-9_-]+).html$'] ="frontend/c_taygia/index/$1";
 $route['tay-gia'] ="frontend/c_taygia/listtaygia/";
 $route['nep-chinh-hinh/([a-zA-Z0-9_-]+).html$'] ="frontend/c_nepchinhhinh/index/$1";
 $route['nep-chinh-hinh'] ="frontend/c_nepchinhhinh/listnepchinhhinh/";
+$route['san-pham-khac/([a-zA-Z0-9_-]+).html$'] ="frontend/c_sanphamkhac/index/$1";
+$route['san-pham-khac'] = "frontend/c_sanphamkhac/listsanphamkhac/";
 //Admin
 $route['default_controller'] = "frontend/home";
 $route['trang-chu'] = "frontend/home";
@@ -76,7 +53,6 @@ $route['admin/gioithieungan'] = "admin/c_gioithieungan";
 $route['admin/settinghome'] = "admin/c_seohome";
 $route['admin/lienhefooter'] = "admin/c_lienhefooter";
 $route['admin/slide'] = "admin/c_slide";
-
-
-/* End of file routes.php */
-/* Location: ./application/config/routes.php */
+$route['admin/newspkhac'] = "admin/c_qlsanphamkhac/addnewsp";
+$route['admin/editspkhac/([a-zA-Z0-9_-]+)'] = "admin/c_qlsanphamkhac/addnewsp/$1";
+$route['admin/qlsanphamkhac'] = "admin/c_qlsanphamkhac/listspkhac";

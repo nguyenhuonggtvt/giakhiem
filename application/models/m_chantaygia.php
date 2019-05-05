@@ -28,7 +28,7 @@
         } 
         function get_sanpham($id){
             return $this->db->select(array('tbl_sanpham.*','dm_nhomsp.id as id_dmsp','dm_nhomsp.slug as slug_cha'))->from('tbl_sanpham')->join('dm_nhomsp','tbl_sanpham.ma_nhomsp=dm_nhomsp.id')->where(array('ma_nhomsp'=>$id))->get()->result_array();
-        } 
+        }
         function listcategories(){
             return $this->db->query("select * from menu where status=2")->result_array();
         }
@@ -38,6 +38,14 @@
             $data['news']=$this->db->query($sql_news)->result_array();
             $data['sps']=$this->db->query($sql_sp)->result_array();
             return $data;
-        }   
+        }
+        // San pham khac
+        function getListOtherProduct() {
+           return $this->db->select(array('tbl_otherproduct.*'))->from('tbl_otherproduct')->get()->result_array();
+        }
+
+        function getOtherProduct($slug) {
+           return $this->db->get_where('tbl_otherproduct',array('slug'=>$slug))->row_array();
+        }
     }
 ?>

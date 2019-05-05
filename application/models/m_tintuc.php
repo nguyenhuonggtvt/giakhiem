@@ -61,22 +61,34 @@ class m_tintuc extends MY_Model{
         }
         
     }
-    function get_nhomsp($id=null){
-        if($id==null)
-        return $this->db->order_by('last_update','DESC')->order_by('created','DESC')->get('dm_nhomsp')->result_array();
+    function get_nhomsp($id = null){
+        if($id == null) {
+            return $this->db->order_by('last_update','DESC')->order_by('created','DESC')->get('dm_nhomsp')->result_array();
+        }
         return $this->db->get_where('dm_nhomsp',array('id'=>$id))->row_array();
-    } 
+    }
     function categories_sp($id=null){
        return $this->db->query("select * from menu where id not in(1,6,7)")->result_array();
-    } 
+    }
     function get_menu($id=null){
         if($id==null)
         return $this->db->order_by('stt_uutien')->get('menu')->result_array();
         return $this->db->get_where('menu',array('id'=>$id))->row_array();
-    }    
+    }
     function get_menu_footer($id=null){
         if($id==null)
         return $this->db->order_by('stt_uutien')->get('menuduoi')->result_array();
         return $this->db->get_where('menuduoi',array('id'=>$id))->row_array();
-    }  
+    }
+    // San pham khac
+    function get_sanphamkhac($id = null) {
+        $arrayData = [];
+        if ($id != null) {
+            $arrayData = $this->db->get_where('tbl_otherproduct', array('id' => $id))->row_array();
+        } else {
+            $arrayData = $this->db->select('tbl_otherproduct.*')->from('tbl_otherproduct')->order_by('order')->order_by('created','DESC')->get()->result_array();
+        }
+
+        return $arrayData;
+    }
 }
