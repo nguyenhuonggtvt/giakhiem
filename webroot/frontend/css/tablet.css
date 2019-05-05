@@ -121,6 +121,12 @@
   .bai-viet-info h2 {
     font-size: 1.1em;
   }
+  .footer-box{
+    padding: 0.5em;
+  }
+  .menu-bottom{
+    padding: 0;
+  }
   /*---------End media query-----------*/
 }
 @media screen and (max-width: 34.375em) {

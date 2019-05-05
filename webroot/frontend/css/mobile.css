@@ -96,7 +96,7 @@
     outline: none;
   }
   #main {
-    padding: 0.6em;
+    padding: 0.6em 1em;
     background: rgba(255, 255, 255, 0.7);
   }
   .box-gioithieu-logo {
@@ -163,7 +163,7 @@
     overflow: hidden;
   }
   .menu-bottom ul li {
-    padding: 0 0 0.2em 0.2em;
+    padding: 0 0.2em 0.3em 0;
     display: inline-block;
     float: left;
   }
@@ -195,8 +195,11 @@
     width: 97.91666667%;
     margin: 0 1.04166667%;
   }
-  .footer-box {
-    padding: 0.5em;
+  .footer-box{
+    padding: 0.5em 1em;
+  }
+  .menu-bottom{
+    padding: 0 1em;
   }
   .footer-box h4 {
     text-align: center;

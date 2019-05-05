@@ -127,9 +127,10 @@ h1.tieude-cap2 {
 }
 .footer-info h4,
 .footer-social h4 {
-  color: #a9d3dd;
+  color: #dfecef;
   font-size: 1.5em;
   font-family: myfontRobotol;
+  font-weight: normal;
 }
 .btnfacebook {
   background-image: url(images/btn-facebook.png);
@@ -270,4 +271,7 @@ h1.tieude-cap2 {
   text-align: center;
   font-weight: normal;
   margin-bottom: 1.5em;
+}
+.pad-0{
+  padding: 0 !important;
 }
