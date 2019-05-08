@@ -65,7 +65,7 @@ label.status-new{
                             <td style="text-align: center;"> {if $value.status==1}<label class="label label-success status-new">Hiển thị</label>{else}<label class="label label-danger status-new">Ẩn</label>{/if}</td>
                             <td class="a-right a-right ">
                             <a class="btn btn-warning btn-sm" href="?hidden={$value.id}"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            <a class="btn btn-primary btn-sm" href="{$url}newsp?edit={$value.id}"><span class="fa fa-edit"></span></a>
+                            <a class="btn btn-primary btn-sm" href="{$url}admin/editspkhac/{$value.id}"><span class="fa fa-edit"></span></a>
                             <a class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc xóa sản phẩm này không?')" href="?del={$value.id}"><span class="glyphicon glyphicon-trash"></span></a>
                             
                             </td>

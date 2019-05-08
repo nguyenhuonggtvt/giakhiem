@@ -1,71 +1,53 @@
 <?php
-/**
-|     _ +----------------------------------------------+ _
-|    /o)| webadmin - Created By Team TPT(P33) - Fithou |(o\
-|   / / |                                              | \ \
-|  ( (_ |  _                                        _  | _) )
-| ((\ \)+-/o)--------------------------------------(o\-+(/ /))
-| (\\\ \_/ /                                        \ \_/ ///)
-|  \      /                                          \      /
-|   \____/ Class name: MY_Model modify by @author ThanhBatmon - 0167.371.3098
- */
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller {
-   function __construct(){
+    function __construct() {
         parent::__construct();
         $this->load->helper('text');
-        if($this->session->userdata('taikhoan')!='')
-        {
+        if($this->session->userdata('taikhoan')!='') {
            
-        }
-        else
-        {
+        } else {
             header('location:'.base_url().'admin/c_login');
         }
-   }
-    function upload($name_input,$name_img,$path=null)
-    {
+    }
+
+    function upload($name_input, $name_img, $path = null) {
        
-         //Khai bao bien cau hinh
-         $config = array();
-         //thuc mục chứa file
-         if($path==null)
-         $config['upload_path']   = './webroot/imgweb';
-         else
-         $config['upload_path']   = $path;
-         //Định dạng file được phép tải
-         $config['allowed_types'] = 'jpg|png|gif|bmp';
-         //Dung lượng tối đa
-         $config['max_size']      = '500000';
-         //Chiều rộng tối đa
-         $config['max_width']     = '2000';
-         //Chiều cao tối đa
-         $config['max_height']    = '2000';
-          $config['overwrite'] =true;
-         //load thư viện upload
-         $config['file_name'] = $name_img;
-         $config["manipulation"]['wm_text'] = 'chantaygiagiakhiem.com';
-         $config["manipulation"]['wm_type'] = 'text';
-         $this->load->library('upload', $config);
-         //thuc hien upload
-         if($this->upload->do_upload($name_input))
-         {
-             //chua mang thong tin upload thanh con
-             return 1;
-             //in cau truc du lieu cua file da upload
-         }
-         else
-         {
+        //Khai bao bien cau hinh
+        $config = array();
+        //thuc mục chứa file
+        if($path == null) {
+            $config['upload_path']   = './webroot/imgweb';
+        } else {
+            $config['upload_path']   = $path;
+        }
+        //Định dạng file được phép tải
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|bmp';
+        //Dung lượng tối đa
+        $config['max_size']      = '5000000';
+        //Chiều rộng tối đa
+        $config['max_width']     = '5000';
+        //Chiều cao tối đa
+        $config['max_height']    = '5000';
+        $config['overwrite']     = true;
+        //load thư viện upload
+        $config['file_name'] = $name_img;
+        $config["manipulation"]['wm_text'] = 'chantaygiagiakhiem.com';
+        $config["manipulation"]['wm_type'] = 'text';
+        $this->load->library('upload', $config);
+        //thuc hien upload
+        if($this->upload->do_upload($name_input)) {
+            //chua mang thong tin upload thanh con
+            return 1;
+            //in cau truc du lieu cua file da upload
+        } else {
             //hien thi lỗi nếu có
             $error = $this->upload->display_errors();
             return  0;
-         }
- 
-      
-      
+        }
     }
-     function thumb_img($path)
-    {
+     
+    function thumb_img($path) {
         $config['image_library'] = 'gd2';
         $config['source_image'] = $path;
         $config['create_thumb'] = TRUE;
@@ -76,7 +58,8 @@ class MY_Controller extends CI_Controller {
         $this->image_lib->resize();
         $this->image_lib->watermark();
     }
-     function water_mark($path){
+
+    function water_mark($path) {
         $config['source_image'] = $path;
         $config['wm_text'] = 'chantaygiagiakhiem.com';
         $config['wm_type'] = 'text';
@@ -88,11 +71,10 @@ class MY_Controller extends CI_Controller {
         $config['wm_padding'] = '100';
         $this->load->library('image_lib', $config);
         $this->image_lib->initialize($config);
-        $a=$this->image_lib->watermark();
-        
+        $a = $this->image_lib->watermark();    
     }
-    function convertStrToSlug($str)
-    {
+
+    function convertStrToSlug($str) {
         $str=preg_replace("/(á|à|ả|ã|ạ|ă|ằ|ắ|ẵ|ặ|â|ầ|ấ|ẩ|ẫ|ậ)/", "a", $str);
         $str=preg_replace("/(ù|ú|ủ|ũ|ụ|ư|ừ|ứ|ử|ữ|ự)/", "u", $str);
         $str=preg_replace("/(è|é|ẻ|ẽ|ẹ|ê|ề|ế|ể|ễ|ệ)/", "e", $str);
