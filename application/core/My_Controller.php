@@ -95,4 +95,33 @@ class MY_Controller extends CI_Controller {
         $str=strtolower($str);
         return $str;
     }
+
+    function resizeImg($path, $width = 0, $height = 0, $thumb = false) {
+        $source = $path;
+        $size = getimagesize($source);
+
+        if($width == 0) {
+            $r_width = 400;
+        } else {
+            $r_width = $width;
+        }
+
+        if($height == 0) {
+            $r_height = ($size[1] * $r_width) / $size[0];
+        } else {
+            $r_height = $height;
+        }
+
+        $config['image_library'] = 'gd2';
+        $config['source_image'] = $source;
+        $config['create_thumb'] = $thumb;
+        $config['maintain_ratio'] = TRUE;
+        $config['width'] = $r_width;
+        $config['height'] = $r_height;
+        
+        $this->load->library('image_lib');
+        $this->image_lib->clear();
+        $this->image_lib->initialize($config);
+        $this->image_lib->resize();
+    }
 }

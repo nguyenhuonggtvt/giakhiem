@@ -32,8 +32,9 @@ class c_qlsanphamkhac extends MY_Controller
         $temp = [
                     'template' => 'admin/v_qlsanphamkhac',
                     'data'     => [
-                                    'listsp' => $aryData,
-                                    'status' => $this->status
+                                    'listsp'    => $aryData,
+                                    'status'    => $this->status,
+                                    'message'   => $this->message
                                 ]
                 ];
         
@@ -103,9 +104,30 @@ class c_qlsanphamkhac extends MY_Controller
 
         if($this->input->post('save'))
         {
-            $data_hethong['settingotherproduct'] = json_encode($this->input->post('data'));
-            $data_hethong['id']='hethong';
-            $this->m_tintuc->SaveData_ToTable('hethong',$data_hethong); 
+            $formData = $this->input->post('data');
+            $strSlug  = $this->convertStrToSlug($formData['tieude']);
+            if($_FILES['hinhanh']['name'] != '') {
+                $extent = end(explode('.',$_FILES['hinhanh']['name']));
+                $extent = strtolower($extent);
+                $formData['hinhanh'] = $strSlug . '.' . $extent;
+            }
+
+            $data_hethong['settingotherproduct'] = json_encode($formData);
+            $data_hethong['id'] = 'hethong';
+            $intOK = $this->m_tintuc->SaveData_ToTable('hethong',$data_hethong);
+
+            if($intOK) {
+                $this->status = 1;
+                if($_FILES['hinhanh']['name'] != '') {
+                    // Upload image
+                    $uploadOK = $this->upload('hinhanh', $formData['hinhanh'], './webroot/imgmenu/');
+                    if($uploadOK) {
+                        $this->resizeImg('webroot/imgmenu/'.$formData['hinhanh'], 400);
+                    }
+                }
+            } else {
+               $this->status = 0;  
+            }
         }
 
         $arySetting = [];
@@ -119,6 +141,7 @@ class c_qlsanphamkhac extends MY_Controller
                     'data'     => [
                                     'arySetting'    => $arySetting,
                                     'status'        => $this->status,
+                                    'message'       => $this->message
                                 ]
                 ];
 
