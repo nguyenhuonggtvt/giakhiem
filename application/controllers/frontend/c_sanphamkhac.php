@@ -52,7 +52,7 @@ class c_sanphamkhac extends CI_Controller{
         }
         $this->title        = (isset($arySetting['tieude'])) ? $arySetting['tieude'] : $this->title;
         $this->description  = (isset($arySetting['mota'])) ? $arySetting['mota'] : $this->description;
-        $this->image_header = (isset($arySetting['hinhanh'])) ? base_url() . 'webroot/imgsp/' . $arySetting['hinhanh'] : '';
+        $this->image_header = (isset($arySetting['hinhanh'])) ? base_url() . 'webroot/imgmenu/' . $arySetting['hinhanh'] : '';
         $this->site_type    = 'object';
         $temp = [
                     'template' => 'frontend/v_sanphamkhac',
