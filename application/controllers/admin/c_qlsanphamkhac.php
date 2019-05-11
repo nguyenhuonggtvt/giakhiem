@@ -117,7 +117,8 @@ class c_qlsanphamkhac extends MY_Controller
         $temp = [
                     'template' => 'admin/v_thongtinspkhac',
                     'data'     => [
-                                    'arySetting'    =>$arySetting
+                                    'arySetting'    => $arySetting,
+                                    'status'        => $this->status,
                                 ]
                 ];
 
