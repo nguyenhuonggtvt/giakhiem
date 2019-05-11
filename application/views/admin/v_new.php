@@ -22,7 +22,7 @@
         <div class="x_panel">
             <div class="x_title">
              <form method="POST" enctype="multipart/form-data">
-               <h2>Bài viết mới</h2>
+               <h2>Bài viết</h2>
                <div class="clearfix"></div>
             </div>
             <div class="x_content">

@@ -91,4 +91,16 @@ class m_tintuc extends MY_Model{
 
         return $arrayData;
     }
+
+    function del_spkhac($id) {
+        $check = $this->db->get_where('tbl_otherproduct', ['id'=>$id])->row_array();
+        if(!empty($check)) {
+            if(file_exists('webroot/imgsp/'.$check['hinhanh']));
+                unlink('webroot/imgsp/'.$check['hinhanh']);
+            return $this->db->delete('tbl_otherproduct', ['id'=>$id]);
+        } else {
+            return $this->db->delete('tbl_otherproduct', ['id'=>$id]);
+        }
+        
+    }
 }

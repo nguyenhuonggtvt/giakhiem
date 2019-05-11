@@ -21,7 +21,7 @@ class c_qlsanphamkhac extends MY_Controller
 
     function listspkhac() {
         if($this->input->get('del')) {
-            if($this->m_tintuc->del_sp($this->input->get('del')))
+            if($this->m_tintuc->del_spkhac($this->input->get('del')))
                 $this->status = 1;
             else
                 $this->status = 0;
@@ -55,6 +55,10 @@ class c_qlsanphamkhac extends MY_Controller
                 $data['showprice'] = 1;
             } else {
                 $data['showprice'] = 0;
+            }
+
+            if(isset($data['id']) && !$data['id']){
+                $data['order'] = 0;
             }
            
             if($_FILES['hinhanh']['name'] != '') {

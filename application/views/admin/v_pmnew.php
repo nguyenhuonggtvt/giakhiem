@@ -49,7 +49,7 @@ label.status-new{
                             <th style="width: 100px;">Nhóm tin</th>
                             <th style="width: 100px;">Ngày tạo</th>
                             <th style="width: 100px;">Trạng thái</th>
-                            <th style="width: 160px;">Tác vụ</th>
+                            <th style="width: 120px;">Tác vụ</th>
                         </tr>
                     </thead>
 
@@ -66,7 +66,6 @@ label.status-new{
                             <td class=" ">{$new.created|date_format:"%d/%m/%Y"}</td>
                             <td style="text-align: center;"> {if $new.status==1}<label class="label label-success status-new">Hiển thị</label>{else}<label class="label label-danger status-new">Ẩn</label>{/if}</td>
                             <td class="a-right a-right ">
-                            <a class="btn btn-warning btn-sm" href="?hidden={$new.id}"><span class="glyphicon glyphicon-eye-open"></span></a>
                             <a class="btn btn-primary btn-sm" href="{$url}news?edit={$new.id}"><span class="fa fa-edit"></span></a>
                             <a class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc xóa bản tin này không?')" href="?del={$new.id}"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
