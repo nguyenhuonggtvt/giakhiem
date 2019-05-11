@@ -47,5 +47,9 @@
         function getOtherProduct($slug) {
            return $this->db->get_where('tbl_otherproduct',array('slug'=>$slug))->row_array();
         }
+
+        function getOtherProductByID($id) {
+           return $this->db->get_where('tbl_otherproduct',array('id'=>$id))->row_array();
+        }
     }
 ?>

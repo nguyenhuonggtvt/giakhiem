@@ -31,6 +31,7 @@ $route['nep-chinh-hinh/([a-zA-Z0-9_-]+).html$'] ="frontend/c_nepchinhhinh/index/
 $route['nep-chinh-hinh'] ="frontend/c_nepchinhhinh/listnepchinhhinh/";
 $route['san-pham-khac/([a-zA-Z0-9_-]+).html$'] ="frontend/c_sanphamkhac/index/$1";
 $route['san-pham-khac'] = "frontend/c_sanphamkhac/listsanphamkhac/";
+$route['add-to-cart'] ="frontend/cart/addToCart/";
 //Admin
 $route['default_controller'] = "frontend/home";
 $route['trang-chu'] = "frontend/home";

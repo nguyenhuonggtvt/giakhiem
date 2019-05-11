@@ -12,6 +12,7 @@ class c_sanphamkhac extends CI_Controller{
         parent::__construct();
         $this->load->model('m_chantaygia');
         $this->load->model('m_tintuc');
+        $this->load->helper('text');
     }
 
     function index($slug = null){

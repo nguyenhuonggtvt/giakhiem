@@ -29,6 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="{$url}webroot/frontend/css/desktop2.css" media="screen and (min-width: 80em)" />
 	<link rel="stylesheet" type="text/css" href="{$url}webroot/frontend/css/desktop3.css" media="screen and (min-width: 120em)" />
 	<!--Nivo Slider-->
+	<link href="{$url}webroot/fonts/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{$url}webroot/frontend/css/nivo-slider/default/default.css"/>
 	<link rel="stylesheet" type="text/css" href="{$url}webroot/frontend/css/nivo-slider/nivo-slider.css"/>
 
@@ -39,6 +40,7 @@
 	<!--End jQuery-->
 	
     <script src="{$url}webroot/frontend/js/main.js"></script>
+    <script src="{$url}webroot/frontend/js/cart.js"></script>
     <script type="text/javascript" src="{$url}webroot/frontend/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
 	
 </head>
