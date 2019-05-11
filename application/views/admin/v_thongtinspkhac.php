@@ -1,21 +1,13 @@
-<script type="text/javascript" src="{$url}webroot/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="{$url}webroot/ckeditor/core.js"></script>
-<!-- page content
-<input type="hidden" value="{$message}" id="notify" /> -->
-{if $status==1}{literal}
-    <script>
-        $(document).ready(function(){
-            NotifySuccess('');
-        });
-    </script>
-{/literal}{/if}
-{if $status==0}{literal}
-    <script>
+<script>
     $(document).ready(function(){
-        NotifyFalse('');
+        {if $status == 1}
+            NotifySuccess('');
+        {/if}
+        {if $status == 0}
+            NotifyFalse('');
+        {/if}
     });
-     </script>
-{/literal}{/if}
+</script>
 
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
