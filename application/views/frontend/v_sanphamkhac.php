@@ -1,7 +1,5 @@
-<h1 class="tieude-web">Các sản phẩm hỗ trợ</h1>
-<div class="danhmuc-gioithieu">
-	Nội dung giới thiệu
-</div>
+<h1 class="tieude-web">{$title}</h1>
+<div class="danhmuc-gioithieu">{$description}</div>
 <p class="tieude-sub">Sản phẩm</p>
 {foreach $sanphams as $sanpham}
 <div class="sanpham-item">

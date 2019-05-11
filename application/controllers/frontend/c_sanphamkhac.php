@@ -27,13 +27,6 @@ class c_sanphamkhac extends CI_Controller{
             $this->status = 0;
         }
         
-        if(!empty($sanpham)) {
-            //$nhom         = $sanpham['ma_nhomsp'];
-            //$sp_lienquan  = $this->m_chantaygia->listsp_filter('ma_nhomsp',$group,$sanpham['id']);
-        } else {
-            //$nhom = '';
-        }
-        
         $temp = [
                     'template' => 'frontend/v_chitietsanphamkhac',
                     'data'     => [
@@ -53,9 +46,13 @@ class c_sanphamkhac extends CI_Controller{
 
     function listsanphamkhac(){
         $sanphams           = $this->m_chantaygia->getListOtherProduct();
-        $gioithieu          = $this->m_tintuc->get_nhomsp(3);
-        $this->title        = 'Các sản phẩm hỗ trợ khác';
-        $this->description  = $gioithieu['mota'];
+        $set                = $this->db->select('settingotherproduct')->get('hethong')->row_array();
+        if($set['settingotherproduct'] != '') {
+            $arySetting     = json_decode($set['settingotherproduct'], true);
+        }
+        $this->title        = (isset($arySetting['tieude'])) ? $arySetting['tieude'] : $this->title;
+        $this->description  = (isset($arySetting['mota'])) ? $arySetting['mota'] : $this->description;
+        $this->image_header = (isset($arySetting['hinhanh'])) ? base_url() . 'webroot/imgsp/' . $arySetting['hinhanh'] : '';
         $this->site_type    = 'object';
         $temp = [
                     'template' => 'frontend/v_sanphamkhac',
@@ -66,7 +63,7 @@ class c_sanphamkhac extends CI_Controller{
                                     'site_type'     => $this->site_type, 
                                     'sanphams'      => $sanphams,
                                     'status'        => $this->status,
-                                    'baiviet'       => $gioithieu
+                                    'image_header'  => $this->image_header,
                             ]
                     
                 ];

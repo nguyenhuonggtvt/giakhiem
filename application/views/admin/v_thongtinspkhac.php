@@ -34,6 +34,7 @@
                     {if $arySetting.hinhanh != ''}
                     <div style="width: 200px; margin:10px 0;"><img style="max-width: 100%;" src="{$url}webroot/imgmenu/{$arySetting.hinhanh}"></div>
                     {/if}
+                    <input type="hidden" name="data[hinhanh]" value="{if isset($arySetting.hinhanh)}{$arySetting.hinhanh}{/if}"/>
                 </div>
                 <div class="form-group">
                     <input type="submit" name="save" value="Lưu lại" class="btn btn-success"/>
