@@ -56,3 +56,4 @@ $route['admin/slide'] = "admin/c_slide";
 $route['admin/newspkhac'] = "admin/c_qlsanphamkhac/addnewsp";
 $route['admin/editspkhac/([a-zA-Z0-9_-]+)'] = "admin/c_qlsanphamkhac/addnewsp/$1";
 $route['admin/qlsanphamkhac'] = "admin/c_qlsanphamkhac/listspkhac";
+$route['admin/thongtinspkhac'] = "admin/c_qlsanphamkhac/aboutinfo";

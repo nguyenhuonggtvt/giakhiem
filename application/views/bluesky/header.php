@@ -125,7 +125,7 @@
                                 </li>
                                 <li><a><i class="fa fa-wheelchair"></i> Sản phẩm khác<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="{$url}">Thông tin</a>
+                                        <li><a href="{$url}admin/thongtinspkhac">Thông tin</a>
                                         </li>
                                         <li><a href="{$url}admin/qlsanphamkhac">Quản lý sản phẩm</a>
                                         </li>

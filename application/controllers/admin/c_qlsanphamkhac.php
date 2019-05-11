@@ -27,12 +27,6 @@ class c_qlsanphamkhac extends MY_Controller
                 $this->status = 0;
         }
 
-        if($this->input->get('hidden')) {
-            $update['id']       = $this->input->get('hidden');
-            $update['status']   = -1;
-            //$this->m_tintuc->SaveData_ToTable('tbl_otherproduct', $update)
-        }
-
         $aryData = $this->m_tintuc->get_sanphamkhac();
 
         $temp = [
@@ -99,6 +93,31 @@ class c_qlsanphamkhac extends MY_Controller
                                  'status'       => $this->status,
                                  'khoiphuc'     => $this->khoiphuc,
                                  'message'      => $this->message
+                                ]
+                ];
+
+        $this->load->view('bluesky/layout',$temp);
+    }
+
+    function aboutinfo() {
+
+        if($this->input->post('save'))
+        {
+            $data_hethong['settingotherproduct'] = json_encode($this->input->post('data'));
+            $data_hethong['id']='hethong';
+            $this->m_tintuc->SaveData_ToTable('hethong',$data_hethong); 
+        }
+
+        $arySetting = [];
+        $set = $this->db->select('settingotherproduct')->get('hethong')->row_array();
+        if($set['settingotherproduct'] != '') {
+            $arySetting = json_decode($set['settingotherproduct'], true);
+        }
+
+        $temp = [
+                    'template' => 'admin/v_thongtinspkhac',
+                    'data'     => [
+                                    'arySetting'    =>$arySetting
                                 ]
                 ];
 
