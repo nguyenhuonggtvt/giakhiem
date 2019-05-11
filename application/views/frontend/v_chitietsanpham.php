@@ -10,13 +10,12 @@
 		<a href="#" class="btn-share share-twitter"></a>
 	</div>
 	<div class="chitietsp-mota">
-		<p><strong>Mô tả</strong></p>
 		{$ctsanpham.motangan}
 	</div>
 </div>
 <div class="box-chia"></div>
 <div class="chitietsp-noidung-chitiet">
-	<p><strong>Nội dung chi tiết</strong></p>
+	<p><strong>Thông tin chi tiết</strong></p>
 	{$ctsanpham.motachitiet}
 </div>
 <h2 class="tieude-lienquan">Sản phẩm liên quan</h2>
