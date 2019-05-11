@@ -122,7 +122,7 @@ class c_qlsanphamkhac extends MY_Controller
                     // Upload image
                     $uploadOK = $this->upload('hinhanh', $formData['hinhanh'], './webroot/imgmenu/');
                     if($uploadOK) {
-                        $this->resizeImg('webroot/imgmenu/'.$formData['hinhanh'], 400);
+                        $this->resizeImg('webroot/imgmenu/'.$formData['hinhanh'], 500);
                     }
                 }
             } else {

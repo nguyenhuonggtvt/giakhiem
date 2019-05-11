@@ -16,16 +16,23 @@
 <div><h3>Nhóm tin tức</h3></div>
 <div class="row">
     <div class="col-md-5">
-    <div class="form-group">
-        <form method="POST">
-            <input type="hidden" name="data[id]" value="{$khoiphuc.id}" />
-            <input class="form-control" type="text" name="data[ten_nhomtin]" value="{$khoiphuc.ten_nhomtin}" required=""/><br />
-            <input type="submit" class="form-control btn btn-success col-md-3 " name="save" value="{$btn_val}"/>
-            <a href="groupnew" class="form-control btn btn-warning col-md-2">Hủy</a>
-            
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="hidden" name="data[id]" value="{$khoiphuc.id}" />
+                <input class="form-control" type="text" name="data[ten_nhomtin]" value="{$khoiphuc.ten_nhomtin}" required=""/>
+            </div>
+            <div class="form-group">
+                <label>Ảnh đại diện</label>
+                <input type="file"  class="form-control" value="{$khoiphuc.hinhanh}" name="hinhanh"/>
+                {if $khoiphuc.hinhanh != ''}
+                <div style="width: 200px; margin:10px 0;"><img style="max-width: 100%;" src="{$url}webroot/imgmenu/{$khoiphuc.hinhanh}"></div>
+                {/if}
+            </div>
+            <div class="form-group">
+                <input type="submit" class="form-control btn btn-success col-md-3 " name="save" value="{$btn_val}"/>
+                <a href="groupnew" class="form-control btn btn-warning col-md-2">Hủy</a>
+            </div>
         </form>
-    </div>
-    
     </div>
     <div class="col-md-7">
         <table class="table table-striped responsive-utilities jambo_table">

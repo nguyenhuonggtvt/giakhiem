@@ -18,7 +18,6 @@ class c_seohome extends MY_Controller
         $set=$this->db->select('settinghome')->get('hethong')->row_array();
         if($set['settinghome']!=''){
             $setting=json_decode($set['settinghome'],true);
-            //print_r($setting);die;
         }
         $temp=array
                 (

@@ -100,6 +100,10 @@ class MY_Controller extends CI_Controller {
         $source = $path;
         $size = getimagesize($source);
 
+        if(!$size || $size[0] <= $width) {
+            return true;
+        }
+
         if($width == 0) {
             $r_width = 400;
         } else {

@@ -20,28 +20,40 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-             <form method="POST" enctype="multipart/form-data">
+             
                <h2>Danh mục nhóm sản phẩm</h2>
                <div class="clearfix"></div>
             </div>
-    <div class="x_content">
-        <div class="form-group">
-            <input type="hidden" name="data[id]" value="{$khoiphuc.id}" />
-            <label class="">Tên danh mục</label>
-            <input class="form-control" type="text" name="data[tennhom]" value="{$khoiphuc.tennhom}" required=""/><br />
-            <label class="">Mô tả</label><br />
-            <input type="text" name="data[mota]" value="{$khoiphuc.mota}" class="form-control" /><br />
-            <label class="">Nội dung</label><br />
-            <textarea id="content_intro" name="data[noidung]">
-             {$khoiphuc.noidung}
-            </textarea><br />
-            <input type="submit" class="btn btn-success" name="save" value="{$btn_val}"/>
-           
-        </div>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="x_content">
+                    <div class="form-group">
+                        <input type="hidden" name="data[id]" value="{$khoiphuc.id}" />
+                        <label class="">Tên danh mục</label>
+                        <input class="form-control" type="text" name="data[tennhom]" value="{$khoiphuc.tennhom}" required=""/>
+                    </div>
+                    <div class="form-group">
+                        <label class="">Mô tả</label><br />
+                        <input type="text" name="data[mota]" value="{$khoiphuc.mota}" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <input type="file"  class="form-control" value="{$khoiphuc.hinhanh}" name="hinhanh"/>
+                        {if $khoiphuc.hinhanh != ''}
+                        <div style="width: 200px; margin:10px 0;"><img style="max-width: 100%;" src="{$url}webroot/imgmenu/{$khoiphuc.hinhanh}"></div>
+                        {/if}
+                    </div>
+                    <div class="form-group">
+                        <label class="">Nội dung</label><br />
+                        <textarea id="content_intro" name="data[noidung]">
+                         {$khoiphuc.noidung}
+                        </textarea><br />
+                        <input type="submit" class="btn btn-success" name="save" value="{$btn_val}"/>
+                    </div>
+                </div>
+            </form>
+        </div>    
     </div>
-            </form> 
-        </div>
-    </div>
+</div>
 
     <br />
     <br />
