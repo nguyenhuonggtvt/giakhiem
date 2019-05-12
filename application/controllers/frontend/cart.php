@@ -1,8 +1,15 @@
 <?php
  class cart extends CI_Controller {
+    public $title           = "Thông tin giỏ hàng - Chân tay giả Gia Khiêm";
+    public $description     = "Chuyên cung cấp các sản phẩm chân tay giả và nẹp chỉnh hình";
+    public $site_type       = "website";
+    public $site_name       = "Chân tay giả Gia Khiêm";
+    public $status          = 1;
+    public $image_header    = '';
     private $cartTemp = [
         'list'  => [],
-        'total' => 0
+        'total' => 0,
+        'count' => 0,
     ];
 
     function __construct() {
@@ -41,6 +48,7 @@
             }
 
             $aryCart['total'] = $aryCart['total'] + $productData['price'];
+            $aryCart['count'] = $aryCart['count'] + 1;
             $msg = 'Đã thêm vào giỏ hàng';
         } else {
             $intOK = 0;
@@ -52,16 +60,32 @@
         $respon = [
             'intOK' => $intOK,
             'msg'   => $msg,
-            'total' => $aryCart['total'],
-            'count' => count($aryCart['list']),
             'aryCart' => $aryCart
         ];
 
         echo json_encode($respon);
     }
 
-    function getTotalPrice($aryData) {
+    function showCart() {
+        $aryCart = json_decode($this->session->userdata("cart"), true);
+        if(!$aryCart) {
+            $aryCart = $this->cartTemp;
+        }
 
+        $temp = [
+                    'template' => 'frontend/view_cart',
+                    'data'     => [
+                                    'title'         => $this->title,
+                                    'description'   => $this->description,
+                                    'site_name'     => $this->site_name,
+                                    'site_type'     => $this->site_type, 
+                                    'aryCart'       => $aryCart,
+                                    'status'        => $this->status,
+                                    'image_header'  => $this->image_header,
+                            ]
+                    
+                ];
+        $this->load->view('common/layout',$temp);
     }
 
     function temFunc() {

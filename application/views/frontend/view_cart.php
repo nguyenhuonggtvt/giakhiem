@@ -1,1 +1,1 @@
-<h2><?php echo $text; ?></h2>
+<h2>Thong tin gio hang</h2>

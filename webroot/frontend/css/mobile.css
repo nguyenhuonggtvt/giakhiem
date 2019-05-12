@@ -26,7 +26,7 @@
   }
   .menu {
     overflow: hidden;
-    padding: 0.5em 0.1em 0.5em 0.1em;
+    margin: 0.5em 0.1em 0.5em 0.1em;
   }
   .menu .show-menu {
     display: block;
@@ -353,6 +353,14 @@
     text-align: justify;
   }
   #box-video {
+    display: none;
+  }
+  /*---------GIO HANG---------*/
+  .button-cart{
+    top: 2px;
+    right: 0.6em;
+  }
+  .cart-text{
     display: none;
   }
   /*------End Query-----------*/

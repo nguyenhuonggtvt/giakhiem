@@ -127,6 +127,14 @@
   .menu-bottom{
     padding: 0;
   }
+  /*-------------GIO HANG------------*/
+  .button-cart{
+    top: -50px;
+    right: 0;
+  }
+  .cart-text{
+    display: inline-block;
+  }
   /*---------End media query-----------*/
 }
 @media screen and (max-width: 34.375em) {

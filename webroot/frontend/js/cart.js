@@ -21,6 +21,13 @@ var ObjCart = {
 		    success: function(data) {
 		    	try { 
 				    var aryData = $.parseJSON(data);
+				    if(aryData.aryCart.count != 0) {
+				    	$('.cart-number').text(aryData.aryCart.count);
+				    	$('.button-cart').removeClass('hidden');
+				    } else {
+				    	$('.cart-number').text(0);
+				    	$('.button-cart').addClass('hidden');
+				    }
 		        	alert(aryData.msg);
 		        	ObjCart.isClick = 0;
 				}
@@ -30,5 +37,9 @@ var ObjCart = {
 				}
 		    }
 	    });
-	}
+	},
+
+	viewCart : function () {
+		window.location.href = ObjCart.base_url + "/xem-gio-hang";
+	},
 };

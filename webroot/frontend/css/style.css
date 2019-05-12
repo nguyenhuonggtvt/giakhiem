@@ -58,6 +58,9 @@ body {
 a {
   text-decoration: none;
 }
+.hidden{
+  display: none;
+}
 .main-menu,
 .main-menu ul {
   list-style: none;
@@ -274,4 +277,44 @@ h1.tieude-cap2 {
 }
 .pad-0{
   padding: 0 !important;
+}
+/*----GIO HANG---*/
+.menu {
+  position: relative;
+}
+.button-cart {
+  position: absolute;
+  height: 42px;
+  padding: 10px;
+  background: #71a913;
+  color: #FFF;
+  border-radius: 3px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.button-cart:hover{
+  color: yellow;
+}
+.cart-number {
+  display: inline-block;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 1px 2px;
+  text-align: center;
+  font-size: 0.9em;
+  background: #FFF;
+  color: #71a913;
+  margin-left: 5px;
+}
+.button-cart:hover .cart-number{
+  background-color: yellow;
+}
+.cart-text{
+  display: inline-block;
+  margin-left: 5px;
+}
+.cart-icon{
+  font-size: 1.2em !important;
 }

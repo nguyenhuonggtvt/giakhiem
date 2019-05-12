@@ -25,6 +25,7 @@
             $this->site_name=$setting['tentrang'];
             $this->img=$setting['hinhanh'];
         }
+        $arySlides = $this->db->get('dm_slide')->result_array();
         $temp=array
                 (
                     'template'=>'frontend/home',
@@ -40,6 +41,7 @@
                                 'gioithieu'=>$this->m_chantaygia->get_newbySlug('gioi-thieu'),
                                 'categories'=>$this->m_chantaygia->listcategories(),
                                 'trangchu'=>1,
+                                'slides' => $arySlides,
                                 ) 
                                 
                     

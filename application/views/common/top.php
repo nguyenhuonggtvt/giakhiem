@@ -16,7 +16,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:description" content="{$description}" />
 	<meta name="twitter:title" content="{$title}" />
-	<meta name="twitter:image" content="{if isset($image_header)}{$image_header}{/if}" />
+	<meta name="twitter:image" content="{if (isset($image_header) && $image_header)}{$image_header}{/if}" />
 	
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	
@@ -90,6 +90,17 @@
 						<input type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm" value="{if isset($keyword)}{$keyword}{/if}"/>
 						<input type="submit" value="" id="search" />
 					</form>
+				</div>
+				<div class="button-cart {if (!isset($aryCart['count']) || (int)$aryCart['count'] == 0)}hidden{/if}" onclick="ObjCart.viewCart();">
+					<i class="fa fa-shopping-cart cart-icon"></i>
+					<span class="cart-text">Giỏ hàng</span>
+					<span class="cart-number">
+						{if (isset($aryCart['count']) && (int)$aryCart['count'] != 0)}
+							{$aryCart['count']}
+						{else}
+							0
+						{/if}
+					</span>
 				</div>
 			</div>
 		</div>
