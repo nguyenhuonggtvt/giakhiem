@@ -1,17 +1,15 @@
 <?php
-class c_menuduoi extends MY_Controller
+class c_menuduoi extends Admin_Controller
 {
     private $btn_val='Tạo mới';
     private $status=10;
     private $message='';
     private $khoiphuc=array('id'=>'','ten_menu'=>'','link'=>'');
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {       
+
+    function index() {       
         if($this->input->post('action')=='stt_up')
         $this->stt_uutien();
         if($this->input->post('save'))

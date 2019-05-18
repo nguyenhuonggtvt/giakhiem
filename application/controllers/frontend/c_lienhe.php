@@ -1,19 +1,16 @@
 <?php
- class c_lienhe extends CI_Controller
-{
+ class c_lienhe extends Public_Controller {
     public $title="Liên hệ";
     public $description="Liên hệ để hiểu hơn về các sản phẩm chân tay giả";
     public $site_type="article";
     public $site_name="Chân tay giả Gia Khiêm";
     public $status=0;
-    function __construct()
-    {
+    
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        
     }
-    function index()
-    {   
+
+    function index() {
         if($this->input->post('send')){
              $data=$this->input->post('data');
              $data['created']=time();
@@ -38,7 +35,8 @@
                 );
         $this->load->view('common/layout',$temp);
     }
-     public function sendemail($param = array()){
+
+    public function sendemail($param = array()) {
         $config = Array(
             'protocol' => 'smtp',//phuong thuc
             'smtp_host' => 'ssl://smtp.googlemail.com',

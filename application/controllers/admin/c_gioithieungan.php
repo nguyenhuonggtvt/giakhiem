@@ -1,15 +1,13 @@
 <?php
-class c_gioithieungan extends MY_Controller
+class c_gioithieungan extends Admin_Controller
 {
    
     private $status=10;
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {  
+
+    function index() {  
         if($this->input->post('save'))
         {   
             $data_hethong=$this->input->post('data');

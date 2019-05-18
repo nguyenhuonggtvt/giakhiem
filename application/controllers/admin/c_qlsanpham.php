@@ -1,16 +1,14 @@
 <?php
-class c_qlsanpham extends MY_Controller
+class c_qlsanpham extends Admin_Controller
 {
     private $btn_val = 'Tạo mới';
     private $status = 10;
     
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {
+
+    function index() {
         if($this->input->get('del')){
             if($this->m_tintuc->del_sp($this->input->get('del')))
                 $this->status=1;

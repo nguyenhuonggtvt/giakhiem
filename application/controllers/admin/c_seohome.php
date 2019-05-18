@@ -1,13 +1,11 @@
 <?php
-class c_seohome extends MY_Controller
+class c_seohome extends Admin_Controller
 {
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {   
+
+    function index() {   
         if($this->input->post('save'))
         {   
             $data_hethong['settinghome']=json_encode($this->input->post('data'));

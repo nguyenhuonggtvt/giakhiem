@@ -1,17 +1,17 @@
 <?php
-class c_search extends CI_Controller{
+class c_search extends Public_Controller {
     public $title="Chân tay giả Gia Khiêm";
     public $description="Tìm kiếm thông tin bài viết, sản phẩm";
     public $site_type="website";
     public $site_name="Tìm kiếm";
     public $status=1;
-    function __construct()
-    {
+
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
         $this->load->helper('text');
     }
-    function index(){
+
+    function index() {
         $keyword = $this->input->get('keyword');
         $data=$this->m_chantaygia->searchByKeyword($keyword);
         $temp=array

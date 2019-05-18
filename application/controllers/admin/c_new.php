@@ -1,5 +1,5 @@
 <?php
-class c_new extends MY_Controller
+class c_new extends Admin_Controller
 {
     private $btn_val='Tạo mới';
     private $status=10;
@@ -13,13 +13,11 @@ class c_new extends MY_Controller
                                 'noidung'   =>''
                            );
     
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {           
+
+    function index() {           
         if($this->input->post('save'))
         {
             $data=$this->input->post('data');

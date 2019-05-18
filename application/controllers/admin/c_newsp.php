@@ -1,5 +1,5 @@
 ﻿<?php
-class c_newsp extends MY_Controller
+class c_newsp extends Admin_Controller
 {
     private $btn_val='Tạo mới';
     private $status=10;
@@ -13,14 +13,11 @@ class c_newsp extends MY_Controller
                                 'ma_nhomsp'     =>''
                            );
     
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
-        
     }
-    function index()
-    {
+
+    function index() {
         
         if($this->input->post('save'))
         {

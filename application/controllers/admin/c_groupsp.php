@@ -1,18 +1,16 @@
 <?php
-class c_groupsp extends MY_Controller
+class c_groupsp extends Admin_Controller
 {
     private $btn_val    = 'Tạo mới';
     private $status     = 10;
     private $message    = '';
     private $khoiphuc   = ['id' => '', 'tennhom' => '', 'mota' => '', 'noidung' => ''];
     
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {          
+
+    function index() {          
         if($this->input->post('save'))
         {
             $data = $this->input->post('data');

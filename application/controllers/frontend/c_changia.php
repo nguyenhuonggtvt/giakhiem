@@ -1,5 +1,5 @@
 <?php
-class c_changia extends CI_Controller{
+class c_changia extends Public_Controller {
     public $title           = "Chân tay giả Gia Khiêm";
     public $description     = "Chuyên cung cấp các sản phẩm chân tay giả hàng đầu";
     public $site_type       = "website";
@@ -9,8 +9,6 @@ class c_changia extends CI_Controller{
 
     function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        $this->load->model('m_tintuc');
     }
 
     function index($id = null) {

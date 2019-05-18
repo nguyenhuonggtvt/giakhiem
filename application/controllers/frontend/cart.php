@@ -1,5 +1,5 @@
 <?php
- class cart extends CI_Controller {
+ class cart extends Public_Controller {
     public $title           = "Thông tin giỏ hàng - Chân tay giả Gia Khiêm";
     public $description     = "Chuyên cung cấp các sản phẩm chân tay giả và nẹp chỉnh hình";
     public $site_type       = "website";
@@ -14,8 +14,6 @@
 
     function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        $this->load->library('session');
         $this->load->helper('text');
     }
 

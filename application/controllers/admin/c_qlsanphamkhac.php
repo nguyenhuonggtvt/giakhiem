@@ -1,5 +1,5 @@
 <?php
-class c_qlsanphamkhac extends MY_Controller
+class c_qlsanphamkhac extends Admin_Controller
 {
     private $btn_val    = 'Thêm mới';
     private $status     = 10;
@@ -16,7 +16,6 @@ class c_qlsanphamkhac extends MY_Controller
     
     function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
 
     function listspkhac() {

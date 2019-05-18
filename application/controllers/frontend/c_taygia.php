@@ -1,15 +1,14 @@
 <?php
-class c_taygia extends CI_Controller{
+class c_taygia extends Public_Controller {
     public $title           = "Chân tay giả Gia Khiêm";
     public $description     = "Chuyên cung cấp các sản phẩm chân tay giả hàng đầu";
     public $site_type       = "website";
     public $site_name       = "Chân tay giả Gia Khiêm";
     public $status          = 1;
     public $image_header    = '';
+
     function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        $this->load->model('m_tintuc');
     }
 
     function index($id = null) {

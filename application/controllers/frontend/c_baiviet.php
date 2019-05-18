@@ -1,5 +1,5 @@
 <?php
-class c_baiviet extends CI_Controller{
+class c_baiviet extends Public_Controller {
     public $title="Chân tay giả Gia Khiêm";
     public $description="Chuyên cung cấp các sản phẩm chân tay giả hàng đầu";
     public $site_type="website";
@@ -9,10 +9,10 @@ class c_baiviet extends CI_Controller{
     function __construct()
     {
         parent::__construct();
-        $this->load->model('m_chantaygia');
         $this->load->helper('text');
     }
-    function index($id=null){
+
+    function index($id = null) {
         $baiviet=$this->m_chantaygia->get_newbySlug($id);
         $group='';
         if(!empty($baiviet))

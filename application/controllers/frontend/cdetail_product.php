@@ -1,5 +1,5 @@
 <?php
-    class cdetail_product extends MY_Controller{
+    class cdetail_product extends Public_Controller {
         function __construct(){
             parent::__construct();
         }

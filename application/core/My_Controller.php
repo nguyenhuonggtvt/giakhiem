@@ -3,10 +3,22 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller {
     function __construct() {
         parent::__construct();
+        $this->load->model('m_chantaygia');
+        $this->load->model('m_tintuc');
+    }
+}
+
+class Public_Controller extends MY_Controller {
+    function __construct() {
+        parent::__construct();
+    }
+}
+
+class Admin_Controller extends MY_Controller {
+    function __construct() {
+        parent::__construct();
         $this->load->helper('text');
-        if($this->session->userdata('taikhoan')!='') {
-           
-        } else {
+        if($this->session->userdata('taikhoan') == '') {
             header('location:'.base_url().'admin/c_login');
         }
     }

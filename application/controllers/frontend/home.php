@@ -1,5 +1,5 @@
 <?php
- class home extends CI_Controller
+ class home extends Public_Controller
 {
     public $title="Chân tay giả Gia Khiêm";
     public $description="Chuyên cung cấp các sản phẩm chân tay giả hàng đầu";
@@ -9,7 +9,6 @@
     function __construct()
     {
         parent::__construct();
-        $this->load->model('m_chantaygia');
         $this->load->helper('text');
         
     }

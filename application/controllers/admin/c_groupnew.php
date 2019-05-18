@@ -1,18 +1,16 @@
 <?php
-class c_groupnew extends MY_Controller
+class c_groupnew extends Admin_Controller
 {
     private $btn_val    = 'Tạo mới';
     private $status     = 10;
     private $message    = '';
     private $khoiphuc   = ['id' => '', 'ten_nhomtin' => ''];
     
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {          
+
+    function index() {          
         if($this->input->post('save'))
         {
             $data=$this->input->post('data');

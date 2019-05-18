@@ -1,19 +1,15 @@
 <?php
- class c_video extends CI_Controller
-{
+ class c_video extends Public_Controller {
     public $title="Thư viện video";
     public $description="Cùng xem các video thực tế về tác dụng của chân tay giả";
     public $site_type="article";
     public $site_name="Chân tay giả Gia Khiêm";
     public $status=0;
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        
     }
-    function index()
-    {
+
+    function index() {
         $aryVideo = [
             ['title' => 'Tập đi với chân giả Gia Khiêm', 'code' => '-xQwVazMKtk'],
             ['title' => 'Viết chữ bằng tay giả - Phần 2', 'code' => '4ZVR7oKWRL4'],

@@ -1,15 +1,12 @@
 <?php
-class c_lienhe extends MY_Controller
-{
+class c_lienhe extends Admin_Controller {
    
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
     }
-    function index()
-    {          
-       
-        $temp=array
+
+    function index() {
+        $temp = array
                 (
                     'template'=>'admin/v_lienhe',
                     'data'    =>array
@@ -21,12 +18,4 @@ class c_lienhe extends MY_Controller
         
         $this->load->view('bluesky/layout',$temp);
     }
-    
- 
-      
-      
-    }
-  
-    
-
-
+}

@@ -1,17 +1,15 @@
 <?php
-class c_nepchinhhinh extends CI_Controller{
+class c_nepchinhhinh extends Public_Controller {
     public $title           = "Nẹp chỉnh hình Gia Khiêm";
     public $description     = "Chuyên cung cấp các sản phẩm nẹp chỉnh hình";
     public $site_type       = "website";
     public $site_name       = "Chân tay giả Gia Khiêm";
     public $status          = 1;
     public $image_header    = '';
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_chantaygia');
-        $this->load->model('m_tintuc');
     }
+    
     function index($id = null) {
         $sanpham=$this->m_chantaygia->get_sanphambySlug($id);
         

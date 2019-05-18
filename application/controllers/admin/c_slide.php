@@ -1,14 +1,12 @@
 <?php
-class c_slide extends MY_Controller
+class c_slide extends Admin_Controller
 {
    
-    function __construct()
-    {
+    function __construct() {
         parent::__construct();
-        $this->load->model('m_tintuc');
     }
-    function index()
-    {          
+
+    function index() {          
        $khoiphuc=array('id'=>'','title_img'=>'','link_href'=>'');
        if($this->input->post('save'))
        {
