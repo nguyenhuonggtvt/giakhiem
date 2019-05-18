@@ -35,6 +35,7 @@
 
 	<script src="{$url}webroot/frontend/js/jquery-1.10.1.min.js"></script>
 	<script src="{$url}webroot/frontend/js/jquery-ui.min.js"></script>
+	<script src="{$url}webroot/frontend/js/jquery.form.min.js"></script>
 	<script src="{$url}webroot/frontend/js/nivo-slider/jquery.nivo.slider.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=vi"></script>
 	<!--End jQuery-->

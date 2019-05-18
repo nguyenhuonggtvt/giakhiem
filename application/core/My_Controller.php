@@ -19,6 +19,27 @@ class Public_Controller extends MY_Controller {
 
         $this->load->vars($globalData);
     }
+
+    function sendMail() {
+        $this->load->library('email');
+
+        $config['protocol'] = 'sendmail';
+        $config['charset']  = 'utf-8';
+        $config['mailtype'] = 'html';
+        $config['wordwrap'] = TRUE;
+
+        $this->email->initialize($config);
+
+        $this->email->from('support@hocphp.info', 'Chân Tay Giả Gia KHiêm');
+        $this->email->to('nguyenvanhuonghg92@gmail.com');
+        $this->email->subject('Thông tin đơn hàng');
+        $this->email->message('Nội dung gửi đơn hàng');
+
+        $intIsOK = $this->email->send();
+        $this->email->clear();
+
+        return $intIsOK;
+    }
 }
 
 class Admin_Controller extends MY_Controller {

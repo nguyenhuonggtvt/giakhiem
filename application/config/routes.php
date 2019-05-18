@@ -33,6 +33,7 @@ $route['san-pham-khac/([a-zA-Z0-9_-]+).html$'] ="frontend/c_sanphamkhac/index/$1
 $route['san-pham-khac'] = "frontend/c_sanphamkhac/listsanphamkhac/";
 $route['add-to-cart'] ="frontend/cart/addToCart/";
 $route['xem-gio-hang'] ="frontend/cart/showCart/";
+$route['send-payment'] ="frontend/cart/sendPayment/";
 //Admin
 $route['default_controller'] = "frontend/home";
 $route['trang-chu'] = "frontend/home";

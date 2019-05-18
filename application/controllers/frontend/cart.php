@@ -86,6 +86,23 @@
         $this->load->view('common/layout',$temp);
     }
 
+    function sendPayment() {
+        $data = $this->input->post();
+        $intOK = $this->sendMail();
+        $msg = "Gửi thành công!";
+
+        if(!$intOK) {
+            $msg = "Gửi không thành công!";
+        }
+
+        $respon = [
+            'intOK' => $intOK,
+            'msg'   => $msg,
+        ];
+
+        echo json_encode($respon);
+    }
+
     function temFunc() {
         // $this->session->unset_userdata('cart');
         $data['text'] = 'Hello';
