@@ -11,6 +11,13 @@ class MY_Controller extends CI_Controller {
 class Public_Controller extends MY_Controller {
     function __construct() {
         parent::__construct();
+
+        $globalData = [];
+        // Cart info
+        $aryCart = json_decode($this->session->userdata("cart"), true);
+        $globalData['aryCart'] = $aryCart;
+
+        $this->load->vars($globalData);
     }
 }
 

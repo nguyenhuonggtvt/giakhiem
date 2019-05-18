@@ -19,9 +19,6 @@
         }
     }
 
-    // Cart info
-    $aryCart = json_decode($this->session->userdata("cart"), true);
-
     $data['isMobile']        = $isMobile;
     $data['controlName']     = $controlName;
     $data['viewNewsSidebar'] = $viewNewsSidebar;
