@@ -12,6 +12,15 @@
 	<div class="chitietsp-mota">
 		{$ctsanpham.motangan}
 	</div>
+	<div class="detail-sanpham-price">
+		<span>Giá: </span>
+		<span>{number_format($ctsanpham.price)}</span>
+	</div>
+	<div class="detail-btn-add-cart">
+		<span class="btn-add-cart" onclick="ObjCart.addProductToCart('{$ctsanpham.id}');">
+			<i class="fa fa-shopping-cart"></i> Giỏ hàng
+		</span>
+	</div>
 </div>
 <div class="box-chia"></div>
 <div class="chitietsp-noidung-chitiet">

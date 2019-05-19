@@ -10,15 +10,19 @@
 	</div>
 	<div class="sanpham-info">
 		<h2><a href="{$url}san-pham-khac/{$sanpham.slug}.html">{$sanpham.ten_sp}</a></h2>
-		<div>{number_format($sanpham.price)}</div>
-		<div>
+		<div class="sanpham-price">{number_format($sanpham.price)}</div>
+		<div class="sanpham-short-des">
 			{if $isMobile}
 				{word_limiter($sanpham.motangan, 23)}
 			{else}
 				{word_limiter($sanpham.motangan, 40)}
 			{/if}
 		</div>
-		<span class="btn-add-cart" onclick="ObjCart.addProductToCart('{$sanpham.id}');"><i class="fa fa-shopping-cart"></i> Giỏ hàng</span>
+		<div class="box-btn-add-cart">
+			<span class="btn-add-cart" onclick="ObjCart.addProductToCart('{$sanpham.id}');">
+				<i class="fa fa-shopping-cart"></i> Giỏ hàng
+			</span>
+		</div>
 	</div>
 </div>
 {/foreach}

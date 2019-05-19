@@ -318,3 +318,32 @@ h1.tieude-cap2 {
 .cart-icon{
   font-size: 1.2em !important;
 }
+.sanpham-price {
+  text-align: center;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.box-btn-add-cart{
+  text-align: center;
+  margin-top: 10px;
+}
+.btn-add-cart {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: red;
+  cursor: pointer;
+}
+.btn-add-cart:hover {
+  color: yellow;
+}
+.detail-sanpham-price {
+  margin-top: 10px;
+  color: #333;
+  font-size: 1.3em;
+}
+.detail-btn-add-cart {
+  margin-top: 10px;
+}

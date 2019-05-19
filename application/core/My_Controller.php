@@ -23,14 +23,19 @@ class Public_Controller extends MY_Controller {
     function sendMail() {
         $this->load->library('email');
 
-        $config['protocol'] = 'sendmail';
-        $config['charset']  = 'utf-8';
+        //$config['protocol'] = 'sendmail';
+        //$config['charset']  = 'utf-8';
         $config['mailtype'] = 'html';
+        //$config['wordwrap'] = TRUE;
+
+        $config['protocol'] = 'sendmail';
+        $config['mailpath'] = '/usr/sbin/sendmail';
+        $config['charset'] = 'iso-8859-1';
         $config['wordwrap'] = TRUE;
 
         $this->email->initialize($config);
 
-        $this->email->from('support@hocphp.info', 'Chân Tay Giả Gia KHiêm');
+        $this->email->from('lienhe@chantaygiagiakhiem.com', 'Chân Tay Giả Gia KHiêm');
         $this->email->to('nguyenvanhuonghg92@gmail.com');
         $this->email->subject('Thông tin đơn hàng');
         $this->email->message('Nội dung gửi đơn hàng');
