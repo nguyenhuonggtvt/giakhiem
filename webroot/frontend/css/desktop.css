@@ -229,5 +229,8 @@
     font-size: 1.2em;
     margin-bottom: 2em;
   }
+  .box-item-cart{
+    width: 50%;
+  }
   /*-----------End media query*/
 }
