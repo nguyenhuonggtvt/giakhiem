@@ -57,6 +57,11 @@ var ObjCart = {
 		    	try {
 				    var aryData = $.parseJSON(data);
 				    alert(aryData.msg);
+				    if(aryData.intOK == 1){
+				    	$('.cart-number').text('0');
+				    	$('.button-cart').addClass('hidden');
+				    	$('.pay-cart').html(aryData.html);
+				    }
 		        	ObjCart.isClick = 0;
 				}
 				catch(err) {

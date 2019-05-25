@@ -16,13 +16,17 @@
 </div>
 <div class="pay-cart">
 	<form id="form-pay-cart">
-		<input type="text" name="cust['name']" placeholder="Họ tên">
-		<input type="text" name="cust['phone']" placeholder="Số điện thoại">
-		<input type="text" name="cust['email']" placeholder="Email">
-		<input type="text" name="cust['address']" placeholder="Địa chỉ">
+		<input type="text" name="cust[name]" placeholder="Họ tên">
+		<input type="text" name="cust[phone]" placeholder="Số điện thoại">
+		<input type="text" name="cust[email]" placeholder="Email">
+		<input type="text" name="cust[address]" placeholder="Địa chỉ">
 		<input type="button" id="btnSendCart" value="Gửi" onclick="ObjCart.sendPayment();">
 	</form>
 </div>
 {else}
-	<p>Không có sản phẩm nào</p>
+	<div style="padding: 0 0.5em;">
+		<p class="box-msg msg-danger">
+			Không có sản phẩm nào. Click <a href="/san-pham-khac">vào đây</a> để tiếp tục mua hàng.
+		</p>
+	</div>
 {/if}

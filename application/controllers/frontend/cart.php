@@ -88,16 +88,40 @@
 
     function sendPayment() {
         $data = $this->input->post();
-        $intOK = $this->sendMail();
-        $msg = "Gửi thành công!";
+        $aryCust = $data['cust'];
+
+        $aryCart = json_decode($this->session->userdata("cart"), true);
+        if(!$aryCart) {
+            $aryCart = $this->cartTemp;
+        }
+
+        $aryData = [
+            'mahoadon'      => 'HD'.date('YmdHi'),
+            'name'          => $aryCust['name'],
+            'phone'         => $aryCust['phone'],
+            'email'         => $aryCust['email'],
+            'address'       => $aryCust['address'],
+            'totalprice'    => $aryCart['total'],
+            'ngaymua'       => date('Y-m-d H:i:s'),
+            'productinfo'   => json_encode($aryCart['list']),
+        ];
+
+        $intOK = $this->m_tintuc->SaveData_ToTable('tbl_hoadon', $aryData);
+        // $intOK = $this->sendMail();
 
         if(!$intOK) {
-            $msg = "Gửi không thành công!";
+            $msg    = "Đơn hàng không gửi được. Vui lòng kiểm tra lại";
+            $html   = '';
+        } else {
+            $this->session->unset_userdata('cart');
+            $msg    = "Đơn hàng đã được gửi. Chúng tôi sẽ liên hệ với bạn sớm nhất.";
+            $html   = $this->load->view('frontend/cust_info_payment', $aryData, true);
         }
 
         $respon = [
             'intOK' => $intOK,
             'msg'   => $msg,
+            'html'  => $html,
         ];
 
         echo json_encode($respon);
