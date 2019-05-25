@@ -18,7 +18,7 @@
 	<meta name="twitter:title" content="{$title}" />
 	<meta name="twitter:image" content="{if (isset($image_header) && $image_header)}{$image_header}{/if}" />
 	
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 	
 	<!--Insert CSS-->
 	<link rel="stylesheet" type="text/css" href="{$url}webroot/frontend/css/normalize.min.css"/>
