@@ -102,7 +102,7 @@
                         <div class="menu_section">
                             <h3>Admin</h3>
                             <ul class="nav side-menu">
-                                <li><a href="{$url}dslienhe"><i class="fa fa-envelope-o"></i>Danh sách gửi liên hệ</a></li> 
+                                <li><a href="{$url}admin/hoa-don"><i class="fa fa-book"></i>Đơn hàng</a></li> 
                                 <li><a><i class="fa fa-newspaper-o"></i> Bài viết <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="{$url}groupnew">Nhóm bài viết</a>
