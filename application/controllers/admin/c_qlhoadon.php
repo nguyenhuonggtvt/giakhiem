@@ -29,5 +29,22 @@ class c_qlhoadon extends Admin_Controller
         
         $this->load->view('bluesky/layout',$temp);
     }
+
+    function viewhoadon($mahoadon) {
+        $aryData = $this->m_tintuc->get_hoadon($mahoadon);
+        $aryData['productinfo'] = json_decode($aryData['productinfo'], true);
+
+        $temp = [
+                    'template' => 'admin/v_chitiethoadon',
+                    'data'     => [
+                                    'status'    => $this->status,
+                                    'message'   => $this->message,
+                                    'aryStatus' => $this->aryStatus,
+                                    'aryData'   => $aryData,
+                                ]
+                ];
+        
+        $this->load->view('bluesky/layout',$temp);
+    }
 }
 

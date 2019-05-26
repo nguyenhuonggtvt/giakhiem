@@ -61,3 +61,4 @@ $route['admin/editspkhac/([a-zA-Z0-9_-]+)'] = "admin/c_qlsanphamkhac/addnewsp/$1
 $route['admin/qlsanphamkhac'] = "admin/c_qlsanphamkhac/listspkhac";
 $route['admin/thongtinspkhac'] = "admin/c_qlsanphamkhac/aboutinfo";
 $route['admin/hoa-don'] = "admin/c_qlhoadon/index";
+$route['admin/xem-hoa/view/([a-zA-Z0-9_-]+)'] = "admin/c_qlhoadon/viewhoadon/$1";

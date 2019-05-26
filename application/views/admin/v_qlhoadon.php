@@ -81,7 +81,7 @@ label.status-order-7 {
                             <td class=" ">{number_format($value.phone)}</td>
                             <td style="text-align: center;"><label class="label status-new status-order-{$value.trangthai}">{$aryStatus[($value.trangthai)]}</label></td>
                             <td class="a-right a-right ">
-                            <a class="btn btn-default btn-sm" title="Xem chi tiết" href="{$url}admin/view/{$value.id}"><span class="fa fa-file-text-o"></span></a>
+                            <a class="btn btn-default btn-sm" title="Xem chi tiết" href="{$url}admin/xem-hoa/view/{$value.mahoadon}"><span class="fa fa-file-text-o"></span></a>
                             </td>
                         </tr>
                     {/foreach}
