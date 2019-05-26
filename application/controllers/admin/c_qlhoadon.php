@@ -1,32 +1,29 @@
 <?php
 class c_qlhoadon extends Admin_Controller
 {
-    private $btn_val    = 'Thêm mới';
     private $status     = 10;
     private $message    = '';
-    private $khoiphuc   = [
-                            'id'            => '',
-                            'ten_sp'        => '',
-                            'price'         => '',
-                            'showprice'     => '',
-                            'hinhanh'       => '',
-                            'motangan'      => '',
-                            'motachitiet'   => '',
-                        ];
+    private $aryStatus  = [
+        0 => 'Mới',
+        1 => 'Đang xử lý',
+        2 => 'Hoàn tất',
+        7 => 'Hủy'
+    ];
     
     function __construct() {
         parent::__construct();
     }
 
     function index() {
-        //$aryData = $this->m_tintuc->get_sanphamkhac();
+        $aryData = $this->m_tintuc->get_hoadon();
 
         $temp = [
                     'template' => 'admin/v_qlhoadon',
                     'data'     => [
-                                    'listsp'    => [],
+                                    'aryData'   => $aryData,
                                     'status'    => $this->status,
-                                    'message'   => $this->message
+                                    'message'   => $this->message,
+                                    'aryStatus' => $this->aryStatus
                                 ]
                 ];
         

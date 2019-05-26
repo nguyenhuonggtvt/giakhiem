@@ -4,8 +4,25 @@
     
 }
 label.status-new{
-    padding: 5px 10px;
-    
+    margin: 0;
+    padding: 10px 10px;
+    min-width: 70px;
+    text-align: center;
+    font-size: 90%;
+    font-weight: normal;
+    display: inline-block;
+}
+label.status-order-0 {
+    background: #449d44;
+}
+label.status-order-1 {
+    background: #f0ad4e;
+}
+label.status-order-2 {
+    background: #31b0d5;
+}
+label.status-order-7 {
+    background: #d9534f;
 }
 #ZeroClipboard_TableToolsMovie_1{
     display: none;
@@ -43,29 +60,28 @@ label.status-new{
                     <thead>
                         <tr class="headings">
                             <th style="text-align: center; width: 50px;">STT</th>
-                            <th style="width: 120px;">Hình ảnh</th>
-                            <th style="width: 180px;">Tên sản phẩm</th>
-                            <th>Mô tả </th>
-                            <th style="width: 100px;">Ngày tạo</th>
+                            <th style="width: 120px;">Mã HD</th>
+                            <th style="width: 180px;">Khách hàng</th>
+                            <th style="width: 120px;">SĐT</th>
+                            <th style="width: 150px;">Ngày đặt</th>
+                            <th>Tổng tiền</th>
                             <th style="width: 120px;">Trạng thái</th>
                             <th style="width: 120px;">Tác vụ</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                    {foreach $listsp as $value}
+                    {foreach $aryData as $key => $value}
                         <tr class="even pointer">
-                            <td class="a-center ">
-                                <input type="text" style="text-align: center;" size="3" data-id={$value.id} value="{$value.order}" class="tableflat"/>
-                            </td>
-                            <td class=" "><img class="img-news-admin" src="{$url}webroot/imgsp/{$value.hinhanh}"/></td>
-                            <td class=" ">{word_limiter($value.ten_sp, 15)}</td>
-                            <td class=" ">{word_limiter($value.motangan, 15)}</td>
-                            <td class=" ">{$value.created|date_format:"%d/%m/%Y"}</td>
-                            <td style="text-align: center;"> {if $value.status==1}<label class="label label-success status-new">Hiển thị</label>{else}<label class="label label-danger status-new">Ẩn</label>{/if}</td>
+                            <td class="a-center" style="text-align: center;">{$key+1}</td>
+                            <td class=" ">{$value.mahoadon}</td>
+                            <td class=" ">{$value.name}</td>
+                            <td class=" ">{$value.phone}</td>
+                            <td class=" ">{date('d/m/Y H:s', strtotime($value.ngaymua))}</td>
+                            <td class=" ">{number_format($value.phone)}</td>
+                            <td style="text-align: center;"><label class="label status-new status-order-{$value.trangthai}">{$aryStatus[($value.trangthai)]}</label></td>
                             <td class="a-right a-right ">
-                            <a class="btn btn-primary btn-sm" href="{$url}admin/editspkhac/{$value.id}"><span class="fa fa-edit"></span></a>
-                            <a class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc xóa sản phẩm này không?')" href="?del={$value.id}"><span class="glyphicon glyphicon-trash"></span></a>
+                            <a class="btn btn-default btn-sm" title="Xem chi tiết" href="{$url}admin/view/{$value.id}"><span class="fa fa-file-text-o"></span></a>
                             </td>
                         </tr>
                     {/foreach}

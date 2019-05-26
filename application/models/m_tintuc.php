@@ -103,4 +103,16 @@ class m_tintuc extends MY_Model{
         }
         
     }
+
+    // Hoa don
+    function get_hoadon($id = null) {
+        $arrayData = [];
+        if ($id != null) {
+            $arrayData = $this->db->get_where('tbl_hoadon', array('id' => $id))->row_array();
+        } else {
+            $arrayData = $this->db->select('tbl_hoadon.*')->from('tbl_hoadon')->order_by('ngaymua','DESC')->get()->result_array();
+        }
+
+        return $arrayData;
+    }
 }
