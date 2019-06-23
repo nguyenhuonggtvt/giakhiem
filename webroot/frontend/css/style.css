@@ -380,7 +380,8 @@ h1.tieude-cap2 {
   margin: 0 auto;
   max-width: 500px;
 }
-#form-pay-cart input[type="text"]{
+#form-pay-cart input[type="text"],
+#form-pay-cart .sl-address{
   width: 100%;
   margin-bottom: 1em;
   padding: 5px 7px;

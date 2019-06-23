@@ -232,5 +232,13 @@
   .box-item-cart{
     width: 50%;
   }
+  /*-------CART-------------*/
+  #form-pay-cart .sl-address{
+    width: 32%;
+    float: left;
+  }
+  #slTinh.sl-address, #slHuyen.sl-address{
+    margin-right: 2%;
+  }
   /*-----------End media query*/
 }

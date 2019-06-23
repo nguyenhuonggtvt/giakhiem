@@ -34,6 +34,7 @@ $route['san-pham-khac'] = "frontend/c_sanphamkhac/listsanphamkhac/";
 $route['add-to-cart'] ="frontend/cart/addToCart/";
 $route['xem-gio-hang'] ="frontend/cart/showCart/";
 $route['send-payment'] ="frontend/cart/sendPayment/";
+$route['get-list-add'] ="frontend/cart/getListAdd/";
 //Admin
 $route['default_controller'] = "frontend/home";
 $route['trang-chu'] = "frontend/home";

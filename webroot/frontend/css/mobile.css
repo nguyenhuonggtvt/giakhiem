@@ -369,4 +369,8 @@
   .siderbar{
     margin-top: 0.5em;
   }
+  #form-pay-cart input[type="text"],
+  #form-pay-cart .sl-address{
+    margin-bottom: 0.5em;
+  }
 }

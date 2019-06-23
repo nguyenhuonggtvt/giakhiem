@@ -69,3 +69,39 @@ $(window).load(function()
         });
 	//END LOAD FUNCTION
 });
+
+var ObjMain = {
+	error : 'Error Warning!',
+	base_url : window.location.origin,
+
+	getAddress : function (type, el) {
+		var data = {
+			type : type,
+			parentID : $(el).val(),
+		};
+		$.ajax({
+		    url: ObjMain.base_url + "/get-list-add",
+		    async: false,
+		    type: "POST",
+		    data: data,
+		    dataType: "html",
+		    success: function(data) {
+		    	try {
+				    var aryData = $.parseJSON(data);
+				    if(aryData.intOK == 1) {
+				    	if(aryData.type == 2){
+				    		$('#slHuyen').html(aryData.htmlQh);
+				    	}
+				    	$('#slXa').html(aryData.htmlXa);
+				    	
+				    } else {
+				    	alert(aryData.msg);
+				    }
+				}
+				catch(err) {
+				    alert(ObjMain.error);
+				}
+		    }
+	    });
+	},
+}

@@ -16,11 +16,37 @@
 </div>
 <div class="pay-cart">
 	<form id="form-pay-cart">
-		<input type="text" name="cust[name]" placeholder="Họ tên">
-		<input type="text" name="cust[phone]" placeholder="Số điện thoại">
-		<input type="text" name="cust[email]" placeholder="Email">
-		<input type="text" name="cust[address]" placeholder="Địa chỉ">
-		<input type="button" id="btnSendCart" value="Gửi" onclick="ObjCart.sendPayment();">
+		<div>
+			<input type="text" name="cust[name]" placeholder="Họ tên">
+		</div>
+		<div>
+			<input type="text" name="cust[phone]" placeholder="Số điện thoại">
+		</div>
+		<div>
+			<input type="text" name="cust[email]" placeholder="Email">
+		</div>
+		<div class="clearfix">
+			<select name="cust[tinh]" id="slTinh" class="sl-address"
+				onchange="ObjMain.getAddress('2', this);">
+				<option value="" disabled selected>Tỉnh thành phố</option>
+				{foreach $aryAdd as $add}
+				<option value="{$add['matp']}">{$add['type']} {$add['name']}</option>
+				{/foreach}
+			</select>
+			<select name="cust[huyen]" id="slHuyen" class="sl-address"
+				onchange="ObjMain.getAddress('3', this);">>
+				<option value="" disabled selected>Quận huyện</option>
+			</select>
+			<select name="cust[xa]" id="slXa" class="sl-address">
+				<option value="" disabled selected>Phường xã</option>
+			</select>
+		</div>
+		<div>
+			<input type="text" name="cust[address]" placeholder="Địa chỉ">
+		</div>
+		<div>
+			<input type="button" id="btnSendCart" value="Gửi" onclick="ObjCart.sendPayment();">
+		</div>
 	</form>
 </div>
 {else}

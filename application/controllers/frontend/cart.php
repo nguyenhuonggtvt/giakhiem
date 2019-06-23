@@ -69,6 +69,7 @@
         if(!$aryCart) {
             $aryCart = $this->cartTemp;
         }
+        $aryAdd = $this->m_chantaygia->getListAddress(1);
 
         $temp = [
                     'template' => 'frontend/view_cart',
@@ -80,6 +81,7 @@
                                     'aryCart'       => $aryCart,
                                     'status'        => $this->status,
                                     'image_header'  => $this->image_header,
+                                    'aryAdd'        => $aryAdd
                             ]
                     
                 ];
@@ -122,6 +124,42 @@
             'intOK' => $intOK,
             'msg'   => $msg,
             'html'  => $html,
+        ];
+
+        echo json_encode($respon);
+    }
+
+    function getListAdd() {
+        $intOK      = 1;
+        $data       = $this->input->post();
+        $type       = $data['type'];
+        $parentID   = $data['parentID'];
+        $htmlQh     = $htmlXa = '';
+        
+        $aryAdd = $this->m_chantaygia->getListAddress($type, $parentID);
+
+        if($type == 2) {
+            $htmlQh = $this->load->view('frontend/select_address', [
+                    'aryAdd' => $aryAdd,
+                    'type'   => 2,
+                ], true);
+            $htmlXa = $this->load->view('frontend/select_address', [
+                    'aryAdd' => [],
+                    'type'   => 3,
+                ], true);
+        } else if($type == 3) {
+            $htmlXa = $this->load->view('frontend/select_address', [
+                    'aryAdd' => $aryAdd,
+                    'type'   => 3,
+                ], true);
+        }
+
+        $respon = [
+            'intOK'     => $intOK,
+            'msg'       => 'Data error!',
+            'type'      => $type,
+            'htmlQh'    => $htmlQh,
+            'htmlXa'    => $htmlXa
         ];
 
         echo json_encode($respon);

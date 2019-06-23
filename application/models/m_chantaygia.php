@@ -51,5 +51,36 @@
         function getOtherProductByID($id) {
            return $this->db->get_where('tbl_otherproduct',array('id'=>$id))->row_array();
         }
+        // Tinh thanh
+        function getListAddress($type, $idParent = '') {
+            switch ($type) {
+                case 1:
+                    return $this->db->select(array('tbl_tinhthanhpho.*'))
+                                ->from('tbl_tinhthanhpho')
+                                ->order_by('type ASC, name ASC')
+                                ->get()->result_array();
+                    break;
+                case 2:
+                    return $this->db->select(array('tbl_quanhuyen.*'))
+                                ->from('tbl_quanhuyen')
+                                ->where(['matp' => $idParent])
+                                ->order_by('type DESC, name ASC')
+                                ->get()->result_array();
+                    break;
+                case 3:
+                    return $this->db->select(array('tbl_xaphuongthitran.*'))
+                                ->from('tbl_xaphuongthitran')
+                                ->where(['maqh' => $idParent])
+                                ->order_by('type ASC, name ASC')
+                                ->get()->result_array();
+                    break;
+                default:
+                    return $this->db->select(array('tbl_tinhthanhpho.*'))
+                                ->from('tbl_tinhthanhpho')
+                                ->order_by('type ASC, name ASC')
+                                ->get()->result_array();
+                    break;
+            }
+        }
     }
 ?>
